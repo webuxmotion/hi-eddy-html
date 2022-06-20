@@ -22,7 +22,7 @@
 }
 
 .button:active {
-  box-shadow: inset 0px 0px 6px #FFFFFF;
+  box-shadow: var(--button-active-shadow);
 }
 
 .button:disabled, .button.is-disabled {

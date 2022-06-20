@@ -2,6 +2,18 @@
   --primary-color: #9747FF;
   --primary-color-hover: #520096;
   --primary-color-disable: #C7B4D8;
+
+  --transparent-hover: rgba(0, 0, 0, 0.05);
+
+  --secondary-color: #FFBB61;
+  --secondary-color-hover: #f9ab45;
+
+  --button-active-shadow: inset 0px 0px 6px #FFFFFF;
+
+  --sidebar-width: 230px;
+  --header-height: 70px;
+
+  --box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
 }
 
 * {

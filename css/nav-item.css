@@ -1,0 +1,64 @@
+.nav-item {
+  position: relative;
+  display: inline-flex;
+}
+
+.nav-item:hover .nav-item__dropdown {
+  display: block;
+}
+
+.nav-item__control {
+  height: var(--header-height);
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  user-select: none;
+}
+
+.nav-item__control[href] {
+  cursor: pointer;
+}
+
+.nav-item__control:hover {
+  background-color: var(--transparent-hover);
+}
+
+.nav-item__control:active {
+  box-shadow: var(--button-active-shadow);
+}
+
+.nav-item__icon {
+  margin-left: 10px;
+  margin-bottom: 2px;
+}
+
+.nav-item__dropdown {
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  box-shadow: var(--box-shadow);
+  display: none;
+}
+
+.nav-item__dropdown a {
+  display: flex;
+  padding: 20px;
+  text-decoration: none;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+
+.nav-item__dropdown a:hover {
+  background-color: var(--transparent-hover);
+}
+
+.nav-item__dropdown a:active {
+  box-shadow: var(--button-active-shadow);
+}
