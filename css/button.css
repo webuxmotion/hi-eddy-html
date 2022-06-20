@@ -16,6 +16,7 @@
   justify-content: center;
   cursor: pointer;
   margin: 0;
+  height: 48px;
 }
 
 .button:hover {
@@ -36,6 +37,14 @@
   text-transform: uppercase;
 }
 
+.button--fullwidth {
+  width: 100%;
+}
+
+.button--border-radius {
+  border-radius: 10px;
+}
+
 .button--header-corner {
   border-bottom-left-radius: var(--radius);
   min-width: 180px;
@@ -50,7 +59,23 @@
   margin-right: 10px;
 }
 
-.button__icon svg {
+.button__icon svg,
+.button__icon img {
   width: 20px;
   height: auto;
+}
+
+.button--bordered {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+}
+
+.button--bordered:hover {
+  background-color: transparent;
+  background-color: var(--transparent-hover);
+}
+
+.button--bordered:active {
+  box-shadow: var(--button-active-shadow);
 }

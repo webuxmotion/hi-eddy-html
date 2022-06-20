@@ -8,7 +8,13 @@
   --secondary-color: #FFBB61;
   --secondary-color-hover: #f9ab45;
 
+  --border-color: #CAE0EE;
+
+  --background-color: #EAF6FD;
+
   --button-active-shadow: inset 0px 0px 6px #FFFFFF;
+
+  --danger-color: #EF5E43;
 
   --sidebar-width: 230px;
   --header-height: 70px;

@@ -1,0 +1,14 @@
+.header {
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header__corner-button {
+  margin-left: 20px;
+}
+
+.header__navigation {
+  margin-right: 30px;
+}
