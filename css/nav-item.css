@@ -3,7 +3,8 @@
   display: inline-flex;
 }
 
-.nav-item:hover .nav-item__dropdown {
+.nav-item:hover .nav-item__dropdown,
+.nav-item:focus .nav-item__dropdown {
   display: block;
 }
 
