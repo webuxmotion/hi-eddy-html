@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #9747FF;
+  --primary-color-hover: #520096;
+  --primary-color-disable: #C7B4D8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, button {
+  font-family: "Exo 2", sans-serif;
+  font-size: 17px;
+}
