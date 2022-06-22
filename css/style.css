@@ -8,9 +8,12 @@
   --secondary-color: #FFBB61;
   --secondary-color-hover: #f9ab45;
 
+  --secondary-color-dark: #EA8512;
+
   --border-color: #CAE0EE;
 
   --background-color: #EAF6FD;
+  --background-color-light: #F8FCFE;
 
   --button-active-shadow: inset 0px 0px 6px #FFFFFF;
 

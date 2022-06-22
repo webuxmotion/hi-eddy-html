@@ -33,10 +33,23 @@ function insertNavigationOnTop() {
           <li>
             <a href="./components/sidebar/sidebar.html">sidebar</a>
           </li>
+          <li>
+            <a href="./components/price-card/price-card.html">price-card</a>
+          </li>
         </ul>
       </div>
       <a class="nav-item__control">
         <span class="nav-item__text">Components</span>
+      </a>
+    </div>
+    <div class="nav-item">
+      <a 
+        target="_blank"
+        href="https://www.figma.com/file/ADcMvwBp6S51uSI4Xlkt23/hi-20jun-2022-tariff-cards-ui?node-id=0%3A1" 
+        class="nav-item__control"
+      >
+        <span class="nav-item__text">Design</span>
+        <span class="nav-item__icon" data-icon="external-link"></span>
       </a>
     </div>
   </div>
@@ -70,6 +83,7 @@ function loadStyles(callback) {
     './components/sidebar-button/sidebar-button.css',
     './components/header/header.css',
     './components/sidebar/sidebar.css',
+    './components/price-card/price-card.css',
   ];
 
   links.forEach((oneLink) => {

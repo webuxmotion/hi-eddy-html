@@ -69,3 +69,16 @@
   transform: rotate(45deg);
   margin-left: 8px;
 }
+
+.nav-item__icon + .nav-item__text {
+  margin-left: 10px;
+}
+
+.nav-item__text + .nav-item__icon {
+  margin-left: 10px;
+}
+
+.nav-item__icon svg {
+  width: 20px;
+  fill: var(--primary-color);
+}
