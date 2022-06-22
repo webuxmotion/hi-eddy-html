@@ -33,3 +33,20 @@ body, button {
   font-family: "Exo 2", sans-serif;
   font-size: 17px;
 }
+
+.l-layout {
+  display: flex;
+}
+
+.l-layout__main {
+  flex-grow: 1;
+}
+
+.l-layout__sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+}
+
+.l-layout__header {
+
+}
