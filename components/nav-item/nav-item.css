@@ -33,19 +33,14 @@
   box-shadow: var(--button-active-shadow);
 }
 
-.nav-item__icon {
-  margin-left: 10px;
-  margin-bottom: 2px;
-}
-
 .nav-item__dropdown {
   background-color: white;
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 1;
   box-shadow: var(--box-shadow);
   display: none;
+  z-index: 10;
 }
 
 .nav-item__dropdown a {

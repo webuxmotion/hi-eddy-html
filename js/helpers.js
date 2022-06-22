@@ -13,11 +13,6 @@ function insertNavigationOnTop() {
       </a>
     </div>
     <div class="nav-item">
-      <a href="./simple-components.html" class="nav-item__control">
-        <span class="nav-item__text">Simple Components</span>
-      </a>
-    </div>
-    <div class="nav-item">
       <div class="nav-item__dropdown">
         <ul>
           <li>
