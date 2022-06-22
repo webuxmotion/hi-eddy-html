@@ -10,6 +10,7 @@
   width: 100%;
   height: var(--header-height);
   color: var(--primary-color-hover);
+  cursor: pointer;
 }
 
 .logo:hover {
