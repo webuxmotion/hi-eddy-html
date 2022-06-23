@@ -1,3 +1,7 @@
 .p-home {
   
 }
+
+.p-home__card {
+    padding: 20px;
+}

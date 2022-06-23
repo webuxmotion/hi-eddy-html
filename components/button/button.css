@@ -37,6 +37,10 @@
   text-transform: uppercase;
 }
 
+.button--font-medium {
+  font-size: 22px;
+}
+
 .button--fullwidth {
   width: 100%;
 }

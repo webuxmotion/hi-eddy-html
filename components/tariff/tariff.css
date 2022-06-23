@@ -1,0 +1,28 @@
+.tariff {
+    text-align: center;   
+    background: rgba(235, 246, 253, 0.34);
+    border: 1px solid #D0EDF4;    
+    border-radius: 14px;
+    padding-bottom: 30px;
+    height: 100%;
+}
+
+.tariff__days {
+    color: #520096;
+    margin-top: 21px;
+}
+
+.tariff__price {
+    color: #EA8512;
+    margin-top: 14px;
+}
+.tariff__button-wrapper {
+    width: 193px;
+    height: 28px;
+    margin: 30px auto;
+}
+
+.tariff__image {
+  border-radius: 14px;
+  width: 100%;
+}

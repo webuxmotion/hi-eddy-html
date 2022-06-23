@@ -9,10 +9,14 @@ const components = [
   'sidebar',
   'header',
   'prices',
+  'days',
+  'tariff-card',
+  'tariff',
+  'course-card',
   'example',
 ];
 
-const pages = ['home', 'example'];
+const pages = ['home', 'example', 'prices'];
 
 loadComponents(() => {
   insertNavigationOnTop();

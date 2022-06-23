@@ -28,7 +28,7 @@ function priceCardVariant1(attr) {
   return priceCard({
     attr,
     title: '10 днів',
-    subtitle: 'Безкоштовно 10 діб',
+    subtitle: 'Безкоштовно <br>10 діб',
     buttonTitle: 'Активувати',
     image: './img/10days.png',
   });
@@ -48,7 +48,7 @@ function priceCardVariant3(attr) {
   return priceCard({
     attr,
     title: '365 днів',
-    subtitle: '2010 грн<br>2010 грн',
+    subtitle: '2010 грн<br>2011 грн<br>2012',
     buttonTitle: 'Придбати',
     image: './img/365days.png',
   });

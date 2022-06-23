@@ -1,0 +1,39 @@
+.days {
+  background: rgba(235, 246, 253, 0.34);
+  border: 1px solid #D0EDF4;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.09);
+  backdrop-filter: blur(43px);
+  border-radius: 14px;
+  padding-bottom: 30px;
+}
+.days img{
+  width: 100%;
+  border-radius: 14px;
+}
+
+.days p {
+  font-style: normal;
+  font-size: 22px;
+  line-height: 29px;
+  text-align: center;
+}
+
+.days__day{
+  color: #520096;
+  font-weight: 700;
+  margin-top: 11px;
+} 
+
+.days__money {
+  font-weight: 500;
+  color: #EA8512;
+  margin: 0 auto;
+  margin-top: 14px;
+}
+
+.days__box {
+  display: flex;
+  justify-content: center;
+  width: 190px;
+  margin: 27px auto 0 auto;
+}

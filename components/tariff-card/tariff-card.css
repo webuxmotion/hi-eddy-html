@@ -1,0 +1,30 @@
+*p {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-size: 22px;
+  line-height: 29px;
+}
+.tariff_card {
+  width: 328px;
+  height: 396px;
+  background-color: #D0EDF4;
+  box-sizing: border-box;
+  background: rgba(235, 246, 253, 0.34);
+  border: 1px solid #D0EDF4;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(43px);
+  border-radius: 14px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.tariff_card__days {
+  text-align: center;
+  font-weight: 700;
+  color: #520096;
+}
+.tariff_card__price {
+  font-weight: 500;
+  text-align: center;
+  color: #EA8512;
+}
