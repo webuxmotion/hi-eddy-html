@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&family=IBM+Plex+Mono:wght@500;700&display=swap');
+.subscription{
+    display: flex;
+    justify-content: space-around;
+}
+.days {
+    width: 328px;
+    height: 396px;
+    background: rgba(235, 246, 253, 0.34);
+    border: 1px solid #D0EDF4;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.09);
+    backdrop-filter: blur(43px);
+    border-radius: 14px;
+}
+.days img{
+    width: 100%;
+    border-radius: 14px;
+}
+
+.days p {
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-size: 22px;
+    line-height: 29px;
+    text-align: center;
+}
+
+.days__day{
+    color: #520096;
+    font-weight: 700;
+    margin-top: 11px;
+} 
+
+.mani{
+    font-weight: 500;
+    color: #EA8512;
+    margin: 0 auto;
+    margin-top: 14px;
+}
+
+.br-mani{
+    width: 173px;
+}
+
+.box-mani{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.box-a{
+    margin-top: 27px;
+}
+
+.box-f{
+    margin-top: 56px;
+}
+
+.bt{
+    background: #6D2CA9;
+    width: 193px;
+    height: 36px;
+    margin: 0 auto;
+}
+
+.bt p {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 28px;
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+}
