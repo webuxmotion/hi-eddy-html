@@ -83,3 +83,8 @@
   position: relative;
   z-index: 2;
 }
+
+.hero__button-wrapper {
+  width: 270px;
+  max-width: 100%;
+}
