@@ -8,6 +8,7 @@ const components = [
   'price-card',
   'sidebar',
   'header',
+  'prices',
   'example',
 ];
 
@@ -134,6 +135,7 @@ function loadStyles(callback) {
     'https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;600;700&display=swap',
     './css/reset.css',
     './css/style.css',
+    './css/layout.css',
   ];
 
   components.forEach((el) => {

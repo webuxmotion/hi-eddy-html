@@ -1,0 +1,31 @@
+.prices {
+  
+}
+
+.prices__header {
+  padding-left: 80px;
+}
+
+.prices__list {
+  display: flex;
+}
+
+.prices__card {
+  padding: 15px;
+  width: 33.3333%;
+}
+
+.prices__title {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  margin-bottom: 30px;
+}
+
+.prices__text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
