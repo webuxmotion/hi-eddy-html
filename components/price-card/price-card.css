@@ -1,7 +1,7 @@
 .price-card {
+  padding-bottom: 30px;
   background-color: var(--background-color-light);
   border-radius: 14px;
-  padding-bottom: 30px;
   box-shadow: 0 0 0 1px var(--border-color), 0px 4px 9px rgba(0, 0, 0, 0.05);
   height: 100%;
   display: flex;

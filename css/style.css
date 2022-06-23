@@ -32,6 +32,7 @@
 body, button {
   font-family: "Exo 2", sans-serif;
   font-size: 17px;
+  color: var(--primary-color-hover);
 }
 
 .l-layout {
@@ -40,11 +41,15 @@ body, button {
 
 .l-layout__main {
   flex-grow: 1;
+  padding-left: var(--sidebar-width);
 }
 
 .l-layout__sidebar {
   width: var(--sidebar-width);
   height: 100vh;
+  left: 0;
+  top: 0;
+  position: fixed;
 }
 
 .l-layout__header {
