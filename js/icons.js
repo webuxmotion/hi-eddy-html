@@ -29,6 +29,9 @@ function insertIcons() {
       case 'external-link':
         el.innerHTML = externalLinkIcon();
         break;
+      case 'lang':
+        el.innerHTML = langIcon();
+        break;
     }
   });
 }
@@ -382,5 +385,15 @@ function externalLinkIcon() {
         c0,4.971,4.029,9,9,9h140c4.971,0,9-4.029,9-9V86.201C158,81.23,153.971,77.201,149,77.201z"/>
     </g>
     </svg>
+  `;
+}
+
+function langIcon() {
+  return `
+  <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18.5 36C28.165 36 36 28.165 36 18.5C36 8.83502 28.165 1 18.5 1C8.83502 1 1 8.83502 1 18.5C1 28.165 8.83502 36 18.5 36Z" stroke="#9747FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1 18.5H36" stroke="#9747FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18.8368 1C23.2562 5.79212 25.7677 12.0111 25.9041 18.5C25.7677 24.9889 23.2562 31.2079 18.8368 36C14.4175 31.2079 11.906 24.9889 11.7695 18.5C11.906 12.0111 14.4175 5.79212 18.8368 1V1Z" stroke="#9747FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
   `;
 }
