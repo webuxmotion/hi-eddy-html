@@ -4,36 +4,35 @@ function insertIcons() {
   const elements = document.querySelectorAll('[data-icon]');
 
   elements.forEach((el) => {
-    switch (el.dataset.icon) {
-      case 'ua-flag':
-        el.innerHTML = uaFlagIcon();
-        break;
-      case 'user':
-        el.innerHTML = userIcon();
-        break;
-      case 'logo':
-        el.innerHTML = logoIcon();
-        break;
-      case 'lessons':
-        el.innerHTML = lessonsIcon();
-        break;
-      case 'courses':
-        el.innerHTML = coursesIcon();
-        break;
-      case 'saved':
-        el.innerHTML = savedIcon();
-        break;
-      case 'paw':
-        el.innerHTML = pawIcon();
-        break;
-      case 'external-link':
-        el.innerHTML = externalLinkIcon();
-        break;
-      case 'lang':
-        el.innerHTML = langIcon();
-        break;
+    let iconName = el.dataset.icon;
+
+    const stringFunction = getFuncName(iconName) + 'Icon';
+    try {
+      el.innerHTML = window[stringFunction](stringFunction);
+    } catch (err) {
+      console.log('iconName', iconName);
+      console.log('stringFunction', stringFunction);
+      console.log(err);
     }
   });
+}
+
+function getFuncName(name) {
+  name = name.split('-');
+  name = name.map((part, index) => {
+    let res = '';
+
+    if (index === 0) {
+      res = part;
+    } else {
+      res = part.charAt(0).toUpperCase() + part.slice(1);
+    }
+
+    return res;
+  });
+  name = name.join('');
+
+  return name;
 }
 
 function uaFlagIcon() {

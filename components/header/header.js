@@ -4,6 +4,26 @@ function headerVariant1(attr) {
   <header class="header" data-name="${attr}">
     <div class="header__navigation">
       <!-- nav-item -->
+      <div class="nav-item">
+        <div class="nav-item__dropdown">
+          ${getSubnavList(components, 'components')}
+        </div>
+        <a class="nav-item__control">
+          <span class="nav-item__text">Components</span>
+        </a>
+      </div>
+      <!-- END. nav-item -->
+      <!-- nav-item -->
+      <div class="nav-item">
+        <div class="nav-item__dropdown">
+          ${getSubnavList(pages, 'pages')}
+        </div>
+        <a class="nav-item__control">
+          <span class="nav-item__text">Pages</span>
+        </a>
+      </div>
+      <!-- END. nav-item -->
+      <!-- nav-item -->
       <div class="nav-item" tabindex="0">
         <div class="nav-item__dropdown">
           <ul>

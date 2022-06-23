@@ -4,10 +4,14 @@ const components = [
   'logo',
   'nav-item',
   'lang-switcher',
+  'hero',
   'price-card',
   'sidebar',
   'header',
+  'example',
 ];
+
+const pages = ['home', 'example'];
 
 loadComponents(() => {
   insertNavigationOnTop();
@@ -46,8 +50,13 @@ function insertComponents() {
       const stringFunction = el.dataset.component;
 
       if (el.parentNode) {
-        el.outerHTML = window[stringFunction](stringFunction);
-        insertComponents();
+        try {
+          el.outerHTML = window[stringFunction](stringFunction);
+          insertComponents();
+        } catch (err) {
+          console.log('stringFunction', stringFunction);
+          console.log(err);
+        }
       }
     }
   });
@@ -63,7 +72,7 @@ function insertNavigationOnTop() {
     </div>
     <div class="nav-item">
       <div class="nav-item__dropdown">
-        ${getSubnavList(components)}
+        ${getSubnavList(components, 'components')}
       </div>
       <a class="nav-item__control">
         <span class="nav-item__text">Components</span>
@@ -71,14 +80,7 @@ function insertNavigationOnTop() {
     </div>
     <div class="nav-item">
       <div class="nav-item__dropdown">
-        <ul>
-          <li>
-            <a href="./pages/home/home.html">home</a>
-          </li>
-          <li>
-            <a href="./pages/example/example.html">example</a>
-          </li>
-        </ul>
+        ${getSubnavList(pages, 'pages')}
       </div>
       <a class="nav-item__control">
         <span class="nav-item__text">Pages</span>
@@ -132,12 +134,14 @@ function loadStyles(callback) {
     'https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;600;700&display=swap',
     './css/reset.css',
     './css/style.css',
-    './pages/home/home.css',
-    './pages/example/example.css',
   ];
 
   components.forEach((el) => {
     links.push(`./components/${el}/${el}.css`);
+  });
+
+  pages.forEach((el) => {
+    links.push(`./pages/${el}/${el}.css`);
   });
 
   links.forEach((oneLink) => {

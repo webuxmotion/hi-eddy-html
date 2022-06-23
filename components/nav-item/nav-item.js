@@ -1,10 +1,10 @@
-function getSubnavList(items) {
+function getSubnavList(items, folder) {
   let list = ``;
 
   items.forEach((el) => {
     list += `
       <li>
-        <a href="./components/${el}/${el}.html">${el}</a>
+        <a href="./${folder}/${el}/${el}.html">${el}</a>
       </li>
     `;
   });
