@@ -22,7 +22,7 @@ function headerVariant1(attr) {
           </ul>
         </div>
         <a class="nav-item__control">
-          <span class="nav-item__text">Про насss</span>
+          <span class="nav-item__text">Про нас</span>
         </a>
       </div>
       <!-- END. nav-item -->

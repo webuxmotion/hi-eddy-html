@@ -2,12 +2,7 @@ function sidebarVariant1(attr) {
   return `
     <!-- sidebar -->
     <div class="sidebar" data-name="${attr}">
-      <!-- logo -->
-      <a href="./index.html" class="logo">
-        <span class="logo__image" data-icon="logo"></span>
-        <span class="logo__text">hi-eddy</span>
-      </a>
-      <!-- END. logo -->
+      <div data-component="logoVariant1"></div>
       <div class="sidebar__group">
         <!-- sidebar-button -->
         <a href="" class="sidebar-button">

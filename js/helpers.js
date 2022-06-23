@@ -1,7 +1,16 @@
-const components = ['lang-switcher', 'sidebar', 'header'];
+const components = [
+  'button',
+  'sidebar-button',
+  'logo',
+  'nav-item',
+  'lang-switcher',
+  'price-card',
+  'sidebar',
+  'header',
+];
 
-insertNavigationOnTop();
 loadComponents(() => {
+  insertNavigationOnTop();
   layout();
   insertComponents();
   loadIconsScript();
@@ -36,32 +45,7 @@ function insertNavigationOnTop() {
     </div>
     <div class="nav-item">
       <div class="nav-item__dropdown">
-        <ul>
-          <li>
-            <a href="./components/button/button.html">button</a>
-          </li>
-          <li>
-            <a href="./components/sidebar-button/sidebar-button.html">sidebar-button</a>
-          </li>
-          <li>
-            <a href="./components/logo/logo.html">logo</a>
-          </li>
-          <li>
-            <a href="./components/lang-switcher/lang-switcher.html">lang-switcher</a>
-          </li>
-          <li>
-            <a href="./components/nav-item/nav-item.html">nav-item</a>
-          </li>
-          <li>
-            <a href="./components/header/header.html">header</a>
-          </li>
-          <li>
-            <a href="./components/sidebar/sidebar.html">sidebar</a>
-          </li>
-          <li>
-            <a href="./components/price-card/price-card.html">price-card</a>
-          </li>
-        </ul>
+        ${getSubnavList(components)}
       </div>
       <a class="nav-item__control">
         <span class="nav-item__text">Components</span>
@@ -148,17 +132,13 @@ function loadStyles(callback) {
     'https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;600;700&display=swap',
     './css/reset.css',
     './css/style.css',
-    './components/button/button.css',
-    './components/logo/logo.css',
-    './components/nav-item/nav-item.css',
-    './components/sidebar-button/sidebar-button.css',
-    './components/header/header.css',
-    './components/sidebar/sidebar.css',
-    './components/price-card/price-card.css',
-    './components/lang-switcher/lang-switcher.css',
     './pages/home/home.css',
     './pages/example/example.css',
   ];
+
+  components.forEach((el) => {
+    links.push(`./components/${el}/${el}.css`);
+  });
 
   links.forEach((oneLink) => {
     const link = document.createElement('link');
