@@ -19,6 +19,24 @@ loadComponents(() => {
   });
 });
 
+function loadComponents(callback) {
+  let counter = 0;
+
+  components.forEach((item) => {
+    var script = document.createElement('script');
+    script.onload = function () {
+      counter++;
+
+      if (counter === components.length) {
+        callback();
+      }
+    };
+    script.src = `./components/${item}/${item}.js`;
+
+    document.body.appendChild(script);
+  });
+}
+
 function insertComponents() {
   const elements = document.querySelectorAll('[data-component]');
 
@@ -95,24 +113,6 @@ function insertNavigationOnTop() {
     document.body.innerHTML = code;
     document.body.innerHTML += content;
   }
-}
-
-function loadComponents(callback) {
-  let counter = 0;
-
-  components.forEach((item) => {
-    var script = document.createElement('script');
-    script.onload = function () {
-      counter++;
-
-      if (counter === components.length) {
-        callback();
-      }
-    };
-    script.src = `./components/${item}/${item}.js`;
-
-    document.body.appendChild(script);
-  });
 }
 
 function loadIconsScript() {
