@@ -13,6 +13,7 @@ const components = [
   'tariff-card',
   'tariff',
   'course-card',
+  'input',
   'example',
 ];
 
@@ -22,6 +23,7 @@ loadComponents(() => {
   insertNavigationOnTop();
   layout();
   insertComponents();
+  insertDocumentation();
   loadIconsScript();
   loadStyles(() => {
     document.body.style.opacity = 1;
@@ -66,6 +68,39 @@ function insertComponents() {
         }
       }
     }
+  });
+}
+
+function insertDocumentation() {
+  const elements = document.querySelectorAll('[data-doc-component]');
+  
+  elements.forEach((el) => {
+    const componentFuncName = el.dataset.docComponent;
+    const getParamsFuncName = componentFuncName + 'Params';
+    const inputParams = window[getParamsFuncName]();
+    el.classList.add('helpers-documentation');
+
+    const preElement = document.createElement('pre');
+
+    let paramsCode = '';
+    inputParams.forEach((param, index) => {
+      paramsCode += `  data-${param}=""`
+
+      if (index + 1 !== inputParams.length) {
+        paramsCode += `\n`
+      }
+    });
+
+const code = `
+<div 
+  data-component="${componentFuncName}"
+${paramsCode}
+>
+</div>`;
+
+    preElement.textContent = code;
+
+    el.appendChild(preElement);
   });
 }
 
@@ -142,6 +177,7 @@ function loadStyles(callback) {
     './css/reset.css',
     './css/style.css',
     './css/layout.css',
+    './css/helpers.css'
   ];
 
   components.forEach((el) => {
@@ -190,4 +226,14 @@ function getLayoutMarkup(content) {
     </div>
   </div>
   `;
+}
+
+function extractParams(params, keys = []) {
+  const res = {};
+
+  keys.forEach(el => {
+    res[el] = params[el] || 'test-' + el;
+  });
+
+  return res;
 }

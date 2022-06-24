@@ -1,0 +1,19 @@
+.input {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--primary-color);
+}
+
+.input__input-field {
+  border: 2px solid var(--border-color);
+  height: 50px;
+  border-radius: 10px;
+  width: 100%;
+  color: var(--primary-color-hover);
+  padding-left: 10px;
+}
+
+.input__label {
+  margin-bottom: 8px;
+}

@@ -1,0 +1,10 @@
+.helpers-documentation {
+  padding: 20px;
+}
+
+.helpers-documentation pre {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: antiquewhite;
+  color: black;
+}
