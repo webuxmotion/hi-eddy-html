@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="./favicon.png" />
-    <title>HI-EDDY</title>
+    <title>button</title>
     <style>
       body {
         opacity: 0;
@@ -16,69 +16,92 @@
   </head>
 
   <body>
-    <br />
-
-    <div>
-      <!-- button -->
-      <a href="#" class="button">РЕЄстрація</a>
-      <!-- END. button -->
+    <div data-doc-component="getButton">
+      <h1>button</h1>
     </div>
 
-    <br />
-    <div style="width: 800px">
-      <!-- button -->
-      <a
-        href="#"
-        class="button button--bordered button--fullwidth button--border-radius"
-      >
-        <span class="button__icon" data-icon="ua-flag"></span>
-        Допомога ЗСУ
-      </a>
-      <!-- END. button -->
+    <div data-decorator="doc"></div>
+    <div 
+      data-component="getButton"
+      data-title="Усі можливі модифікатори"
+      data-iconleft="ua-flag"
+      data-iconleftclasses="button__icon--dark"
+      data-iconright="user"
+      data-iconrightclasses="button__icon--light"
+      data-tag="a"
+      data-href="./index.html"
+      data-classes="
+        button--bordered 
+        button--fullwidth 
+        button--font-medium
+        button--border-radius 
+        button--header 
+        button--header-corner
+      "
+      data-disabled="true"
+    >
     </div>
 
-    <br />
-    <div>
-      <!-- button -->
-      <a href="#" class="button button--header button--header-bottom-radius">
-        <span class="button__icon" data-icon="logo"></span>
-        Вхід</a
-      >
-      <!-- END. button -->
+    <div data-decorator="doc"></div>
+    <div data-component="getButton"></div>
+
+    <div data-decorator="doc"></div>
+    <div 
+      data-component="getButton"
+      data-title="Звичайна кнопка"
+    >
     </div>
 
-    <br />
-    <div>
-      <!-- button -->
-      <button class="button button--header button--header-corner">
-        РЕЄстрація
-      </button>
-      <!-- END. button -->
+    <div data-decorator="doc"></div>
+    <div 
+      data-component="getButton"
+      data-title="Допомога ЗСУ"
+      data-iconleft="ua-flag"
+      data-tag="a"
+      data-classes="button--bordered button--fullwidth button--border-radius"
+      data-href="./index.html"
+    >
     </div>
 
-    <br />
-    <div>
-      <!-- button -->
-      <button class="button button--header button--header-corner" disabled>
-        РЕЄстрація
-      </button>
-      <!-- END. button -->
+    <div data-decorator="doc"></div>
+    <div 
+      data-component="getButton"
+      data-title="Вхід"
+      data-iconleft="user"
+      data-iconleftclasses="button__icon--light"
+      data-tag="a"
+      data-classes="button--header button--header-bottom-radius"
+      data-href="./pages/login.html"
+    >
     </div>
 
-    <br />
-    <div>
-      <!-- button -->
-      <button class="button button--header button--header-corner is-disabled">
-        РЕЄстрація
-      </button>
-      <!-- END. button -->
+    <div data-decorator="doc"></div>
+    <div 
+      data-component="getButton"
+      data-title="Рeєстрація"
+      data-tag="a"
+      data-classes="button--header button--header-corner"
+      data-href="./pages/registration.html"
+    >
     </div>
 
-    <br>
-    <div>
-      <!-- button -->
-      <button class="button button--border-radius button--font-medium">Активувати</button>
-      <!-- END. button -->
+    <div data-decorator="doc"></div>
+    <div 
+      data-component="getButton"
+      data-title="Рeєстрація"
+      data-tag="a"
+      data-classes="button--header button--header-corner"
+      data-href="./pages/registration.html"
+      data-disabled="true"
+    >
+    </div>
+
+    <div data-decorator="doc"></div>
+    <div 
+      data-component="getButton"
+      data-title="Активувати"
+      data-classes="button--border-radius button--font-medium"
+    >
     </div>
 
     <script src="./js/helpers.js"></script>

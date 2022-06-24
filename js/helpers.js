@@ -18,7 +18,13 @@ const components = [
   'example',
 ];
 
-const pages = ['home', 'prices', 'courses', 'example'];
+const pages = [
+  'home', 
+  'prices', 
+  'courses', 
+  'profile',
+  'example'
+];
 
 loadComponents(() => {
   insertNavigationOnTop();
@@ -77,29 +83,31 @@ function decorate() {
   const elements = document.querySelectorAll('[data-decorator]');
 
   elements.forEach(el => {
-    const nextElement = el.nextElementSibling;
-    el.classList.add('helpers-documentation');
-    const preElement = document.createElement('pre');
-    const paramsKeys = Object.keys(nextElement.dataset);
+    if (el.dataset.decorator === 'doc') {
+      const nextElement = el.nextElementSibling;
+      el.classList.add('helpers-documentation');
+      const preElement = document.createElement('pre');
+      const paramsKeys = Object.keys(nextElement.dataset);
+  
+      let paramsCode = '';
+      paramsKeys.forEach((param, index) => {
+        paramsCode += `  data-${param}="${nextElement.dataset[param]}"`
+  
+        if (index + 1 !== paramsKeys.length) {
+          paramsCode += `\n`
+        }
+      });
 
-    let paramsCode = '';
-    paramsKeys.forEach((param, index) => {
-      paramsCode += `  data-${param}="${nextElement.dataset[param]}"`
-
-      if (index + 1 !== paramsKeys.length) {
-        paramsCode += `\n`
-      }
-    });
-
-    const code = `
+      const code = `
 <div 
 ${paramsCode}
 >
 </div>`;
 
-    preElement.textContent = code;
+      preElement.textContent = code;
 
-    el.appendChild(preElement);
+      el.appendChild(preElement);
+    }
   });
 }
 
@@ -158,6 +166,11 @@ function insertNavigationOnTop() {
       </div>
       <a class="nav-item__control">
         <span class="nav-item__text">Pages</span>
+      </a>
+    </div>
+    <div class="nav-item">
+      <a href="./icons.html" class="nav-item__control">
+        <span class="nav-item__text">Icons</span>
       </a>
     </div>
     <div class="nav-item">

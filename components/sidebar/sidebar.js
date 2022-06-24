@@ -11,7 +11,7 @@ function sidebarVariant1({ component }) {
         </a>
         <!-- END. sidebar-button -->
         <!-- sidebar-button -->
-        <a href="#" class="sidebar-button">
+        <a href="./pages/courses/courses.html" class="sidebar-button">
           <span class="sidebar-button__icon" data-icon="courses"></span>
           <span class="sidebar-button__text">Курси</span>
         </a>
@@ -35,15 +35,15 @@ function sidebarVariant1({ component }) {
         </a>
         <!-- END. sidebar-button -->
         <div class="sidebar__button-wrapper">
-          <!-- button -->
-          <a
-            href="#"
-            class="button button--bordered button--fullwidth button--border-radius"
+          <div 
+            data-component="getButton"
+            data-title="Допомога ЗСУ"
+            data-iconleft="ua-flag"
+            data-tag="a"
+            data-classes="button--bordered button--fullwidth button--border-radius"
+            data-href="./index.html"
           >
-            <span class="button__icon" data-icon="ua-flag"></span>
-            Допомога ЗСУ
-          </a>
-          <!-- END. button -->
+          </div>
         </div>
       </div>
       <div class="sidebar__lang-switcher-wrapper">

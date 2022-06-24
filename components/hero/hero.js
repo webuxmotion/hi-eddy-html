@@ -7,11 +7,14 @@ function heroVariant1({ component }) {
           <h1 class="hero__title">Академія hi-eddy <br />вітає вас</h1>
           <h2 class="hero__subtitle">В нас є 2 курси з програмування</h2>
           <div class="hero__button-wrapper">
-            <!-- button -->
-            <a class="button button--border-radius button--fullwidth">
-              Дивитись курси
-            </a>
-            <!-- END. button -->
+            <div 
+              data-component="getButton"
+              data-title="Дивитись курси"
+              data-tag="a"
+              data-href="./pages/courses/courses.html"
+              data-classes="button--fullwidth button--border-radius"
+            >
+            </div>
           </div>
 
           <div class="hero__why">

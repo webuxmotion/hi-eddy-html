@@ -8,8 +8,9 @@ function getInput(params) {
   const newValue = value === 'test-value' ? '' : value;
   const newType = type === 'test-type' ? 'text' : type;
 
-  const newDisabled = disabled === 'test-disabled' ? false : disabled;
-  const disabledAttr = newDisabled ? `disabled="true"` : '';
+  const disabledAttr = disabled === 'test-disabled' 
+    ? '' 
+    : `disabled="true"`;
 
   return `
     <!-- input -->

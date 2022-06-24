@@ -27,7 +27,8 @@
   box-shadow: var(--button-active-shadow);
 }
 
-.button:disabled, .button.is-disabled {
+.button:disabled,
+.button.is-disabled {
   background-color: var(--primary-color-disable);
   pointer-events: none;
 }
@@ -59,16 +60,6 @@
   border-bottom-right-radius: var(--radius);
 }
 
-.button__icon {
-  margin-right: 10px;
-}
-
-.button__icon svg,
-.button__icon img {
-  width: 20px;
-  height: auto;
-}
-
 .button--bordered {
   background-color: transparent;
   color: var(--primary-color);
@@ -82,4 +73,23 @@
 
 .button--bordered:active {
   box-shadow: var(--button-active-shadow);
+}
+
+.button__icon+.button__text,
+.button__text+.button__icon {
+  margin-left: 10px;
+}
+
+.button__icon svg,
+.button__icon img {
+  width: 20px;
+  height: auto;
+}
+
+.button__icon--dark svg path {
+  stroke: var(--primary-color);
+}
+
+.button__icon--light svg path {
+  stroke: white;
 }

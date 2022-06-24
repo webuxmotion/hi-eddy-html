@@ -1,4 +1,52 @@
+const icons = [
+  'ua-flag',
+  'logo',
+  'paw',
+  'user',
+  'lessons',
+  'lang',
+  'courses',
+  'saved',
+  'external-link',
+];
+
 insertIcons();
+
+insertIconsDoc();
+
+function insertIconsDoc() {
+  const elements = document.querySelectorAll('[data-doc-icons]');
+
+  if (elements.length) {
+    
+    elements.forEach((el) => {
+      el.classList.add('helpers-icons-list');
+
+      icons.forEach(iconName => {
+
+        const stringFunction = getFuncName(iconName) + 'Icon';
+
+        const divElement = document.createElement('div');
+        const iconWrapperElement = document.createElement('div');
+        const h3Element = document.createElement('h3');
+        h3Element.textContent = iconName;
+
+        try {
+          const iconContent = window[stringFunction](stringFunction);
+          
+          iconWrapperElement.innerHTML = iconContent;
+          divElement.appendChild(h3Element);
+          divElement.appendChild(iconWrapperElement);
+          el.appendChild(divElement);
+        } catch (err) {
+          console.log('iconName', iconName);
+          console.log('stringFunction', stringFunction);
+          console.log(err);
+        }
+      })
+    });
+  }
+}
 
 function insertIcons() {
   const elements = document.querySelectorAll('[data-icon]');
@@ -67,14 +115,14 @@ function userIcon() {
   >
     <path
       d="M21 23.5V21C21 19.6739 20.4732 18.4021 19.5355 17.4645C18.5979 16.5268 17.3261 16 16 16H6C4.67392 16 3.40215 16.5268 2.46447 17.4645C1.52678 18.4021 1 19.6739 1 21V23.5"
-      stroke="white"
+      stroke="black"
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
     <path
       d="M11 11C13.7614 11 16 8.76142 16 6C16 3.23858 13.7614 1 11 1C8.23858 1 6 3.23858 6 6C6 8.76142 8.23858 11 11 11Z"
-      stroke="white"
+      stroke="black"
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
