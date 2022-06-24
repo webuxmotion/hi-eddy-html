@@ -1,7 +1,7 @@
-function pricesVariant1(attr) {
+function pricesVariant1({ component }) {
   return `
     <!-- prices -->
-    <div class="prices" data-name="${attr}">
+    <div class="prices" data-name="${component}">
       <div class="prices__header">
         <h2 class="prices__title">Тарифні плани</h2>
         <p class="prices__text">

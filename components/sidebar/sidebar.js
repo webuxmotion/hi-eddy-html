@@ -1,7 +1,7 @@
-function sidebarVariant1(attr) {
+function sidebarVariant1({ component }) {
   return `
     <!-- sidebar -->
-    <div class="sidebar" data-name="${attr}">
+    <div class="sidebar" data-name="${component}">
       <div data-component="logoVariant1"></div>
       <div class="sidebar__group">
         <!-- sidebar-button -->

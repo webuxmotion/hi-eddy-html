@@ -1,4 +1,4 @@
-function courseCardVariant1(attr) {
+function courseCardVariant1({ component }) {
   return `
   <!-- course-card -->
   <div class="course-card">

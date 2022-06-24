@@ -1,7 +1,7 @@
-function tariffVariant1(attr) {
+function tariffVariant1({ component }) {
   return `
     <!-- tariff -->
-    <div class="tariff" data-name="${attr}">
+    <div class="tariff" data-name="${component}">
       <img class="tariff__image" src="./img/10days.png" alt="">
       <p class="tariff__days">10 днів</p>
       <p class="tariff__price">Безкоштовно <br> 10 діб</p>

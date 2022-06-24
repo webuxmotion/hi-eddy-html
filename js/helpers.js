@@ -16,7 +16,7 @@ const components = [
   'example',
 ];
 
-const pages = ['home', 'example', 'prices'];
+const pages = ['home', 'prices', 'courses', 'example'];
 
 loadComponents(() => {
   insertNavigationOnTop();
@@ -56,7 +56,9 @@ function insertComponents() {
 
       if (el.parentNode) {
         try {
-          el.outerHTML = window[stringFunction](stringFunction);
+          el.outerHTML = window[stringFunction]({
+            ...el.dataset,
+          });
           insertComponents();
         } catch (err) {
           console.log('stringFunction', stringFunction);
@@ -167,12 +169,14 @@ function layout() {
   const pageElement = document.getElementById('page');
   if (pageElement) {
     const pageContent = pageElement.innerHTML;
-    const fullPageCode = getCode(pageContent);
+    const fullPageCode = getLayoutMarkup(pageContent);
     pageElement.innerHTML = fullPageCode;
   }
-  function getCode(content) {
-    return `
-    <div class="l-layout">
+}
+
+function getLayoutMarkup(content) {
+  return `
+  <div class="l-layout">
     <aside class="l-layout__sidebar">
       <div data-component="sidebarVariant1"></div>
     </aside>
@@ -185,6 +189,5 @@ function layout() {
       </div>
     </div>
   </div>
-    `;
-  }
+  `;
 }

@@ -1,7 +1,7 @@
-function headerVariant1(attr) {
+function headerVariant1({ component }) {
   return `
   <!-- header -->
-  <header class="header" data-name="${attr}">
+  <header class="header" data-name="${component}">
     <div class="header__navigation">
       <!-- nav-item -->
       <div class="nav-item">

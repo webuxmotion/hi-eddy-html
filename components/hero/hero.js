@@ -1,7 +1,7 @@
-function heroVariant1(attr) {
+function heroVariant1({ component }) {
   return `
     <!-- hero -->
-    <div class="hero" data-name="${attr}">
+    <div class="hero" data-name="${component}">
       <div class="hero__column hero__column--main">
         <div class="hero__main">
           <h1 class="hero__title">Академія hi-eddy <br />вітає вас</h1>

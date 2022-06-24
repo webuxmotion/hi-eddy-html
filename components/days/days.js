@@ -1,7 +1,7 @@
-function daysVariant1(attr) {
+function daysVariant1({ component }) {
   return `
     <!-- days -->
-    <div class="days" data-name="${attr}">
+    <div class="days" data-name="${component}">
       <img src="./img/10days.png" alt="">
       <p class="days__day">10 днів</p>
       <p class="days__money">Безкоштовно <br>10 діб</p>

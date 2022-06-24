@@ -1,7 +1,7 @@
-function exampleVariant1(attr) {
+function exampleVariant1({ component }) {
   return `
     <!-- example -->
-    <div class="example" data-name="${attr}">
+    <div class="example" data-name="${component}">
       example
     </div>
     <!-- END. example -->

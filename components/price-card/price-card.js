@@ -1,7 +1,7 @@
-function priceCard({ attr, title, subtitle, image, buttonTitle }) {
+function getPriceCard({ component, title, subtitle, image, buttonTitle }) {
   return `
     <!-- price-card -->
-    <div class="price-card" data-name="${attr}">
+    <div class="price-card" data-name="${component}">
       <div
         class="price-card__image"
         style="background-image: url(${image})"
@@ -24,9 +24,9 @@ function priceCard({ attr, title, subtitle, image, buttonTitle }) {
   `;
 }
 
-function priceCardVariant1(attr) {
-  return priceCard({
-    attr,
+function priceCardVariant1({ component }) {
+  return getPriceCard({
+    component,
     title: '10 днів',
     subtitle: 'Безкоштовно <br>10 діб',
     buttonTitle: 'Активувати',
@@ -34,9 +34,9 @@ function priceCardVariant1(attr) {
   });
 }
 
-function priceCardVariant2(attr) {
-  return priceCard({
-    attr,
+function priceCardVariant2({ component }) {
+  return getPriceCard({
+    component,
     title: '30 днів',
     subtitle: '215 грн',
     buttonTitle: 'Придбати',
@@ -44,9 +44,9 @@ function priceCardVariant2(attr) {
   });
 }
 
-function priceCardVariant3(attr) {
-  return priceCard({
-    attr,
+function priceCardVariant3({ component }) {
+  return getPriceCard({
+    component,
     title: '365 днів',
     subtitle: '2010 грн<br>2011 грн<br>2012',
     buttonTitle: 'Придбати',
