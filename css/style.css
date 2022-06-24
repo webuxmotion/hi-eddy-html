@@ -37,3 +37,8 @@ textarea {
   font-size: 17px;
   color: var(--primary-color-hover);
 }
+
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+}

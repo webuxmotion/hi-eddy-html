@@ -1,12 +1,15 @@
-function getInputParams() {
-  return ['id', 'label', 'placeholder', 'name', 'value', 'type'];
+function getInputParamsKeys() {
+  return ['id', 'label', 'placeholder', 'name', 'value', 'type', 'disabled'];
 }
 
 function getInput(params) {
-  const { id, label, placeholder, name, value, type } = extractParams(params, getInputParams());
+  const { id, label, placeholder, name, value, type, disabled } = extractParams(params, getInputParamsKeys());
 
   const newValue = value === 'test-value' ? '' : value;
   const newType = type === 'test-type' ? 'text' : type;
+
+  const newDisabled = disabled === 'test-disabled' ? false : disabled;
+  const disabledAttr = newDisabled ? `disabled="true"` : '';
 
   return `
     <!-- input -->
@@ -19,6 +22,7 @@ function getInput(params) {
         class="input__input-field"
         placeholder="${placeholder}"
         value="${newValue}"
+        ${disabledAttr}
       >
     </div>
     <!-- END. input -->

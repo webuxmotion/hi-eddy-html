@@ -14,6 +14,7 @@ const components = [
   'tariff',
   'course-card',
   'input',
+  'group-title',
   'example',
 ];
 
@@ -22,6 +23,7 @@ const pages = ['home', 'prices', 'courses', 'example'];
 loadComponents(() => {
   insertNavigationOnTop();
   layout();
+  decorate();
   insertComponents();
   insertDocumentation();
   loadIconsScript();
@@ -71,12 +73,42 @@ function insertComponents() {
   });
 }
 
+function decorate() {
+  const elements = document.querySelectorAll('[data-decorator]');
+
+  elements.forEach(el => {
+    const nextElement = el.nextElementSibling;
+    el.classList.add('helpers-documentation');
+    const preElement = document.createElement('pre');
+    const paramsKeys = Object.keys(nextElement.dataset);
+
+    let paramsCode = '';
+    paramsKeys.forEach((param, index) => {
+      paramsCode += `  data-${param}="${nextElement.dataset[param]}"`
+
+      if (index + 1 !== paramsKeys.length) {
+        paramsCode += `\n`
+      }
+    });
+
+    const code = `
+<div 
+${paramsCode}
+>
+</div>`;
+
+    preElement.textContent = code;
+
+    el.appendChild(preElement);
+  });
+}
+
 function insertDocumentation() {
   const elements = document.querySelectorAll('[data-doc-component]');
   
   elements.forEach((el) => {
     const componentFuncName = el.dataset.docComponent;
-    const getParamsFuncName = componentFuncName + 'Params';
+    const getParamsFuncName = componentFuncName + 'ParamsKeys';
     const inputParams = window[getParamsFuncName]();
     el.classList.add('helpers-documentation');
 
@@ -91,7 +123,7 @@ function insertDocumentation() {
       }
     });
 
-const code = `
+    const code = `
 <div 
   data-component="${componentFuncName}"
 ${paramsCode}
@@ -232,7 +264,13 @@ function extractParams(params, keys = []) {
   const res = {};
 
   keys.forEach(el => {
-    res[el] = params[el] || 'test-' + el;
+    if (params[el] === 'true') {
+      res[el] = true;
+    } else if (params[el] === 'false') {
+      res[el] = false;
+    } else {
+      res[el] = params[el] || 'test-' + el;
+    }
   });
 
   return res;

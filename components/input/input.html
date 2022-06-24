@@ -16,20 +16,26 @@
   </head>
 
   <body>
-    <br />
+    
 
-    <div data-doc-component="getInput"></div>
+    <div data-doc-component="getInput">
+      <h1>input</h1>
+    </div>
 
-    <div data-component="getInput"></div>
+    <div data-decorator="doc"></div>
+    <div data-component="getInput" data-disabled="true" data-value="My Name"></div>
 
+    <div data-decorator="doc"></div>
     <div 
       data-component="getInput"
       data-id="firstname"
       data-name="firstname"
       data-label="Ім’я"
       data-placeholder=" "
+      data-value="My Name"
     ></div>
 
+    <div data-decorator="doc"></div>
     <div 
       data-component="getInput"
       data-id="lastname"
@@ -38,6 +44,7 @@
       data-placeholder=" "
     ></div>
 
+    <div data-decorator="doc"></div>
     <div 
       data-component="getInput"
       data-id="email"

@@ -1,17 +1,17 @@
-.example {
+.group-title {
   display: flex;
   width: 100%;
   align-items: center;
 }
 
-.example__text {
+.group-title__text {
   color: var(--primary-color);
   font-size: 12px;
   text-transform: uppercase;
   margin-right: 10px;
 }
 
-.example::after {
+.group-title::after {
   content: '';
   display: flex;
   flex-grow: 1;
