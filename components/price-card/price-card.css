@@ -29,6 +29,7 @@
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 14px;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .price-card__text {

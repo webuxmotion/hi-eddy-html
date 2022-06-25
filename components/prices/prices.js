@@ -11,13 +11,13 @@ function pricesVariant1({ component }) {
       </div>
       <div class="prices__list">
         <div class="prices__card">
-          <div data-component="tariffVariant1"></div>
+          <div data-component="priceCardVariant1"></div>
         </div>
         <div class="prices__card">
           <div data-component="priceCardVariant2"></div>
         </div>
         <div class="prices__card">
-          <div data-component="daysVariant1"></div>
+          <div data-component="priceCardVariant3"></div>
         </div>
       </div>
     </div>

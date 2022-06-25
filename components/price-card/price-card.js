@@ -50,6 +50,6 @@ function priceCardVariant3({ component }) {
     title: '365 днів',
     subtitle: '2010 грн<br>2011 грн<br>2012',
     buttonTitle: 'Придбати',
-    image: './img/365days.png',
+    image: './img/365days.jpg',
   });
 }
