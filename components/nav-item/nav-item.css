@@ -80,5 +80,8 @@
 
 .nav-item__icon svg {
   width: 20px;
+}
+
+.nav-item__icon svg path {
   fill: var(--primary-color);
 }

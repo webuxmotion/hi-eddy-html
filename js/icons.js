@@ -7,80 +7,20 @@ const icons = [
   'lang',
   'courses',
   'saved',
+  'check',
   'external-link',
 ];
 
 insertIcons();
-
 insertIconsDoc();
 
-function insertIconsDoc() {
-  const elements = document.querySelectorAll('[data-doc-icons]');
-
-  if (elements.length) {
-    
-    elements.forEach((el) => {
-      el.classList.add('helpers-icons-list');
-
-      icons.forEach(iconName => {
-
-        const stringFunction = getFuncName(iconName) + 'Icon';
-
-        const divElement = document.createElement('div');
-        const iconWrapperElement = document.createElement('div');
-        const h3Element = document.createElement('h3');
-        h3Element.textContent = iconName;
-
-        try {
-          const iconContent = window[stringFunction](stringFunction);
-          
-          iconWrapperElement.innerHTML = iconContent;
-          divElement.appendChild(h3Element);
-          divElement.appendChild(iconWrapperElement);
-          el.appendChild(divElement);
-        } catch (err) {
-          console.log('iconName', iconName);
-          console.log('stringFunction', stringFunction);
-          console.log(err);
-        }
-      })
-    });
-  }
-}
-
-function insertIcons() {
-  const elements = document.querySelectorAll('[data-icon]');
-
-  elements.forEach((el) => {
-    let iconName = el.dataset.icon;
-
-    const stringFunction = getFuncName(iconName) + 'Icon';
-    try {
-      el.innerHTML = window[stringFunction](stringFunction);
-    } catch (err) {
-      console.log('iconName', iconName);
-      console.log('stringFunction', stringFunction);
-      console.log(err);
-    }
-  });
-}
-
-function getFuncName(name) {
-  name = name.split('-');
-  name = name.map((part, index) => {
-    let res = '';
-
-    if (index === 0) {
-      res = part;
-    } else {
-      res = part.charAt(0).toUpperCase() + part.slice(1);
-    }
-
-    return res;
-  });
-  name = name.join('');
-
-  return name;
+function checkIcon() {
+  return `
+  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.32031 2.44V13.1432C4.32031 13.6955 3.8726 14.1432 3.32031 14.1432C2.76803 14.1432 2.32031 13.6955 2.32031 13.1432V2.38286C2.32031 1.86758 2.52501 1.37341 2.88936 1.00905C3.25372 0.644696 3.74789 0.440002 4.26317 0.440002H22.1775C22.6927 0.440002 23.1869 0.644696 23.5513 1.00905C23.9156 1.37341 24.1203 1.86758 24.1203 2.38286V20.2971C24.1203 20.8124 23.9156 21.3066 23.5513 21.671C23.1869 22.0353 22.6927 22.24 22.1775 22.24H14.116C13.5637 22.24 13.116 21.7923 13.116 21.24C13.116 20.6877 13.5637 20.24 14.116 20.24H22.1203V2.44H4.32031Z" fill="black"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9198 14.851C14.2893 15.2615 14.256 15.8938 13.8455 16.2633L6.10152 23.2329C5.72122 23.5752 5.1439 23.5752 4.76359 23.2329L0.891591 19.7481C0.481081 19.3786 0.447802 18.7463 0.817261 18.3358C1.18672 17.9253 1.81901 17.892 2.22952 18.2615L5.43256 21.1442L12.5076 14.7767C12.9181 14.4072 13.5504 14.4405 13.9198 14.851Z" fill="black"/>
+  </svg>
+  `;
 }
 
 function uaFlagIcon() {
@@ -422,15 +362,9 @@ function pawIcon() {
 
 function externalLinkIcon() {
   return `
-    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 194.818 194.818" style="enable-background:new 0 0 194.818 194.818;" xml:space="preserve">
-    <g>
-      <path d="M185.818,2.161h-57.04c-4.971,0-9,4.029-9,9s4.029,9,9,9h35.312l-86.3,86.3c-3.515,3.515-3.515,9.213,0,12.728
-        c1.758,1.757,4.061,2.636,6.364,2.636s4.606-0.879,6.364-2.636l86.3-86.3v35.313c0,4.971,4.029,9,9,9s9-4.029,9-9v-57.04
-        C194.818,6.19,190.789,2.161,185.818,2.161z"/>
-      <path d="M149,77.201c-4.971,0-9,4.029-9,9v88.456H18v-122h93.778c4.971,0,9-4.029,9-9s-4.029-9-9-9H9c-4.971,0-9,4.029-9,9v140
-        c0,4.971,4.029,9,9,9h140c4.971,0,9-4.029,9-9V86.201C158,81.23,153.971,77.201,149,77.201z"/>
-    </g>
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30.5215 0.35498H21.1523C20.3358 0.35498 19.674 1.01677 19.674 1.83328C19.674 2.6498 20.3358 3.31159 21.1523 3.31159H26.9525L12.7773 17.4869C12.1999 18.0642 12.1999 19.0002 12.7773 19.5775C13.066 19.8661 13.4443 20.0105 13.8226 20.0105C14.2009 20.0105 14.5791 19.8661 14.8679 19.5775L29.0432 5.40224V11.2026C29.0432 12.0191 29.705 12.6809 30.5215 12.6809C31.338 12.6809 31.9998 12.0191 31.9998 11.2026V1.83345C31.9998 1.01677 31.338 0.35498 30.5215 0.35498Z" fill="black"/>
+      <path d="M24.4741 12.681C23.6576 12.681 22.9958 13.3428 22.9958 14.1593V28.6887H2.95661V8.64948H18.3602C19.1767 8.64948 19.8385 7.98769 19.8385 7.17117C19.8385 6.35466 19.1767 5.69287 18.3602 5.69287H1.4783C0.661787 5.69287 0 6.35466 0 7.17117V30.167C0 30.9835 0.661787 31.6453 1.4783 31.6453H24.4741C25.2906 31.6453 25.9524 30.9835 25.9524 30.167V14.1593C25.9524 13.3428 25.2906 12.681 24.4741 12.681Z" fill="black"/>
     </svg>
   `;
 }
@@ -443,4 +377,73 @@ function langIcon() {
     <path d="M18.8368 1C23.2562 5.79212 25.7677 12.0111 25.9041 18.5C25.7677 24.9889 23.2562 31.2079 18.8368 36C14.4175 31.2079 11.906 24.9889 11.7695 18.5C11.906 12.0111 14.4175 5.79212 18.8368 1V1Z" stroke="#9747FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
   `;
+}
+
+function insertIconsDoc() {
+  const elements = document.querySelectorAll('[data-doc-icons]');
+
+  if (elements.length) {
+    
+    elements.forEach((el) => {
+      el.classList.add('helpers-icons-list');
+
+      icons.forEach(iconName => {
+
+        const stringFunction = getFuncName(iconName) + 'Icon';
+
+        const divElement = document.createElement('div');
+        const iconWrapperElement = document.createElement('div');
+        const h3Element = document.createElement('h3');
+        h3Element.textContent = iconName;
+
+        try {
+          const iconContent = window[stringFunction](stringFunction);
+          
+          iconWrapperElement.innerHTML = iconContent;
+          divElement.appendChild(h3Element);
+          divElement.appendChild(iconWrapperElement);
+          el.appendChild(divElement);
+        } catch (err) {
+          console.log('iconName', iconName);
+          console.log('stringFunction', stringFunction);
+          console.log(err);
+        }
+      })
+    });
+  }
+}
+
+function insertIcons() {
+  const elements = document.querySelectorAll('[data-icon]');
+
+  elements.forEach((el) => {
+    let iconName = el.dataset.icon;
+
+    const stringFunction = getFuncName(iconName) + 'Icon';
+    try {
+      el.innerHTML = window[stringFunction](stringFunction);
+    } catch (err) {
+      console.log('iconName', iconName);
+      console.log('stringFunction', stringFunction);
+      console.log(err);
+    }
+  });
+}
+
+function getFuncName(name) {
+  name = name.split('-');
+  name = name.map((part, index) => {
+    let res = '';
+
+    if (index === 0) {
+      res = part;
+    } else {
+      res = part.charAt(0).toUpperCase() + part.slice(1);
+    }
+
+    return res;
+  });
+  name = name.join('');
+
+  return name;
 }
