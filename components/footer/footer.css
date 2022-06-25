@@ -1,0 +1,22 @@
+.footer {
+  padding-top: 150px;
+  position: relative;
+}
+
+.footer__water {
+  height: 55px;
+  width: 100%;
+  display: block;
+}
+
+.footer__rock {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.footer__duck-big {
+  position: absolute;
+  right: 200px;
+  bottom: 30px;
+}

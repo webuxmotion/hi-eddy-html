@@ -15,6 +15,7 @@ const components = [
   'course-card',
   'input',
   'group-title',
+  'footer',
   'example',
 ];
 
@@ -91,18 +92,29 @@ function decorate() {
   
       let paramsCode = '';
       paramsKeys.forEach((param, index) => {
-        paramsCode += `  data-${param}="${nextElement.dataset[param]}"`
+        if (paramsKeys.length === 1) {
+          paramsCode += `data-${param}="${nextElement.dataset[param]}"`
+        } else {
+          paramsCode += `  data-${param}="${nextElement.dataset[param]}"`
+        }
+        
   
         if (index + 1 !== paramsKeys.length) {
           paramsCode += `\n`
         }
       });
 
-      const code = `
+      let code;
+
+      if (paramsKeys.length === 1) {
+        code = `<div ${paramsCode}></div>`;
+      } else {
+        code = `
 <div 
 ${paramsCode}
 >
 </div>`;
+      }
 
       preElement.textContent = code;
 
@@ -131,12 +143,16 @@ function insertDocumentation() {
       }
     });
 
-    const code = `
-<div 
-  data-component="${componentFuncName}"
-${paramsCode}
+    let code;
+    
+    if (inputParams.length === 0) {
+      code = `<div data-component="${componentFuncName}"${paramsCode}></div>`;
+    } else {
+      code = `<div 
+  data-component="${componentFuncName}"${paramsCode}
 >
 </div>`;
+    }
 
     preElement.textContent = code;
 
@@ -267,6 +283,9 @@ function getLayoutMarkup(content) {
       </div>
       <div class="l-layout__content">
         ${content}
+      </div>
+      <div class="l-layout__footer">
+        <div data-component="getFooter"></div>
       </div>
     </div>
   </div>

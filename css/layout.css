@@ -18,6 +18,9 @@
 .l-layout__main {
   flex-grow: 1;
   padding-left: var(--sidebar-width);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .l-layout__sidebar {
@@ -32,4 +35,5 @@
 }
 
 .l-layout__content {
+  flex-grow: 1;
 }
