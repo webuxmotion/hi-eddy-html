@@ -1,0 +1,37 @@
+.lesson-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--background-color);
+  border-radius: 12px;
+}
+
+.lesson-card__text {
+  color: var(--primary-color);
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.lesson-card__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.lesson-card__image {
+  padding-bottom: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.lesson-card__main {
+  padding: 20px;
+  padding-bottom: 30px;
+}

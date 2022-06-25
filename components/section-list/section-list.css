@@ -1,0 +1,12 @@
+.section-list {
+}
+
+.section-list__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-list__item {
+  width: 33.33333%;
+  padding: 15px;
+}

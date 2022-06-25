@@ -1,6 +1,7 @@
 const components = [
   'button',
   'sidebar-button',
+  'section-list',
   'logo',
   'nav-item',
   'lang-switcher',
@@ -17,6 +18,7 @@ const components = [
   'input',
   'group-title',
   'title',
+  'lesson-card',
   'footer',
   'example',
 ];
@@ -26,6 +28,7 @@ const pages = [
   'prices', 
   'courses', 
   'profile',
+  'one-lesson',
   'example'
 ];
 
@@ -299,14 +302,48 @@ function extractParams(params, keys = []) {
   const res = {};
 
   keys.forEach(el => {
-    if (params[el] === 'true') {
-      res[el] = true;
-    } else if (params[el] === 'false') {
-      res[el] = false;
+    if (el.startsWith("list")) {
+      res[el] = extractListParams(params, el);
     } else {
-      res[el] = params[el] || 'test-' + el;
+      if (params[el] === 'true') {
+        res[el] = true;
+      } else if (params[el] === 'false') {
+        res[el] = false;
+      } else {
+        res[el] = params[el] || 'test-' + el;
+      }
     }
   });
 
   return res;
+}
+
+function extractListParams(params, key) {
+  const paramsArr = Object.keys(params);
+
+  const itemsArr = [];
+  
+  paramsArr.forEach(param => {
+    if (param.startsWith(key)) {
+      
+      // delete from start string the key
+      var replace = "^(" + key + "\)";
+      var re = new RegExp(replace,"g");
+      let propertyName = param.replace(re, "");
+      // set element number
+      let elementNumber = parseInt(propertyName[propertyName.length - 1]);
+      elementNumber -= 1;
+      // delete the last char
+      propertyName = propertyName.slice(0, -1);
+      // lower case first letter
+      propertyName = propertyName.toLowerCase();
+      if (!itemsArr[elementNumber]) {
+        itemsArr[elementNumber] = {};
+      }
+
+      itemsArr[elementNumber][propertyName] = params[param];
+    }
+  })
+  
+  return itemsArr;
 }
