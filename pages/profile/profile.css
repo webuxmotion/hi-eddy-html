@@ -1,3 +1,34 @@
 .p-profile {
   padding: 50px;
+  display: grid;
+  gap: 50px;
+  grid-template-areas:
+    'title title'
+    'form status';
+  grid-template-columns: auto 500px;
+}
+
+.p-profole__layout-title {
+  grid-area: title;
+}
+
+.p-profole__layout-profile-form {
+  grid-area: form;
+  
+}
+
+.p-profole__layout-tariff-status {
+  grid-area: status;
+}
+
+.p-profole__group-title {
+  margin-bottom: 20px;
+}
+
+.p-profole__input {
+  margin-bottom: 20px;
+}
+
+.p-profile__inputs-group {
+  padding-bottom: 20px;
 }

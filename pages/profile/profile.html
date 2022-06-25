@@ -20,66 +20,106 @@
   <div id="page">
     <!-- p-profile -->
     <div class="p-profile">
-      <div 
-        data-component="getTitle"
-        data-title="Профіль"
-      >
-      </div>
 
-      <div data-component="getGroupTitle" data-title="Основна інформація"></div>
-
-      <div 
-        data-component="getInput" 
-        data-id="firstname" 
-        data-name="firstname" 
-        data-label="Ім’я" 
-        data-placeholder=" "
-      >
+      <!-- __layout-title -->
+      <div class="p-profole__layout-title">
+        <div 
+          data-component="getTitle"
+          data-title="Профіль"
+        >
+        </div>
       </div>
-      
-      <div 
-        data-component="getInput"
-        data-id="lastname"
-        data-name="lastname"
-        data-label="Прізвище"
-        data-placeholder=" "
-      >
-      </div>
+      <!-- END. __layout-title -->
 
-      <div data-component="getGroupTitle" data-title="Додаткова інфо"></div>
-
-      <div 
-        data-component="getInput" 
-        data-id="lelegram" 
-        data-name="lelegram" 
-        data-label="Telegram" 
-        data-placeholder=" "
-      >
+      <!-- __layout-profile-form -->
+      <div class="p-profole__layout-profile-form">
+        <form method="GET">
+          <div class="p-profole__group-title">
+            <div data-component="getGroupTitle" data-title="Основна інформація"></div>
+          </div>
+          <div class="p-profile__inputs-group">
+            <div class="p-profole__input">
+              <div 
+                data-component="getInput" 
+                data-id="firstname" 
+                data-name="firstname" 
+                data-label="Ім’я" 
+                data-placeholder=" "
+              >
+              </div>
+            </div>
+            <div class="p-profole__input">
+              <div 
+                data-component="getInput"
+                data-id="lastname"
+                data-name="lastname"
+                data-label="Прізвище"
+                data-placeholder=" "
+              >
+              </div>
+            </div>
+            <div class="p-profole__input">
+              <div 
+                data-component="getInput"
+                data-id="email"
+                data-name="email"
+                data-label="E-mail"
+                data-type="email"
+                data-placeholder=" "
+                data-value="test@gmail.com"
+                data-disabled="true"
+              >
+              </div>
+            </div>
+          </div>
+          <div class="p-profole__group-title">
+            <div data-component="getGroupTitle" data-title="Додаткова інфо"></div>
+          </div>
+          <div class="p-profile__inputs-group">
+            <div class="p-profole__input">
+              <div 
+                data-component="getInput" 
+                data-id="lelegram" 
+                data-name="lelegram" 
+                data-label="Telegram" 
+                data-placeholder=" "
+              >
+              </div>
+            </div>
+            <div class="p-profole__input">
+              <div 
+                data-component="getInput" 
+                data-id="facebook" 
+                data-name="facebook" 
+                data-label="Facebook" 
+                data-placeholder=" "
+              >
+              </div>
+            </div>
+          </div>
+          <div class="p-profile__form-button">
+            <div 
+              data-component="getButton"
+              data-title="Зберегти"
+              data-classes="button--border-radius"
+            >
+            </div>
+          </div>
+        </form>
       </div>
+      <!-- END. __layout-profile-form -->
 
-      <div 
-        data-component="getInput" 
-        data-id="facebook" 
-        data-name="facebook" 
-        data-label="Facebook" 
-        data-placeholder=" "
-      >
+      <!-- __layout-tariff-status -->
+      <div class="p-profole__layout-tariff-status">
+        <div 
+          data-component="getTariffStatus"
+          data-image="./img/10days.png"
+          data-text="Вітаємо! Основною перевагою всіх тарифних планів є можливість додавати уроки в «Завершені». Таким чином ви можете відрізняти уроки, з якими ви ознайомились та вивчили, від усіх інших уроків."
+        >
+        </div>
       </div>
-
-      <div 
-        data-component="getButton"
-        data-title="Зберегти"
-        data-classes="button--border-radius"
-      >
-      </div>
-
-      <div 
-        data-component="getTariffStatus"
-        data-image="./img/10days.png"
-        data-text="Вітаємо! Основною перевагою всіх тарифних планів є можливість додавати уроки в «Завершені». Таким чином ви можете відрізняти уроки, з якими ви ознайомились та вивчили, від усіх інших уроків."
-      >
-      </div>
-      
+      <!-- END. __layout-tariff-status -->
+    
     </div>
     <!-- END. p-profile -->
   </div>
