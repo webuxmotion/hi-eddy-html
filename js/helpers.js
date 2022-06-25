@@ -11,6 +11,7 @@ const components = [
   'prices',
   'days',
   'tariff-card',
+  'tariff-status',
   'tariff',
   'course-card',
   'input',
