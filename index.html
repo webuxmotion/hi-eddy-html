@@ -11,21 +11,37 @@
         opacity: 0;
         transition: 0.3s;
       }
+      .index-page {
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 70px);
+      }
+      .index-page__content {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+      }
+      
     </style>
   </head>
   <body>
-    <div style="display: flex; align-items: center; justify-content: center; padding-top: 50px;">
-      <img style="width: 400px;" src="./img/dog-with-sign.svg" alt="hieddy sith sign">
-      <div style="margin-bottom: 150px; width: 200px;">
-        <div 
-          data-component="getButton"
-          data-title="Почати"
-          data-tag="a"
-          data-href="./pages/home/home.html"
-          data-classes="button--border-radius button--font-medium button--fullwidth"
-        >
+    <div class="index-page">
+      <div class="index-page__content">
+        <img style="width: 200px;" src="./img/dog-with-sign.svg" alt="hieddy sith sign">
+        <div style="margin-bottom: 60px; margin-left: 50px; width: 200px;">
+          <div 
+            data-component="getButton"
+            data-title="На головну"
+            data-tag="a"
+            data-href="./pages/home/home.html"
+            data-classes="button--border-radius button--font-medium button--fullwidth"
+          >
+          </div>
         </div>
       </div>
+      
+      <div data-component="getFooter"></div>
     </div>
     <script src="./js/helpers.js"></script>
   </body>
