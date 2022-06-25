@@ -5,6 +5,13 @@ function headerVariant1({ component }) {
     <div class="header__navigation">
       <!-- nav-item -->
       <div class="nav-item">
+        <a href="./index.html" class="nav-item__control">
+          <span class="nav-item__text">Home</span>
+        </a>
+      </div>
+      <!-- END. nav-item -->
+      <!-- nav-item -->
+      <div class="nav-item">
         <div class="nav-item__dropdown">
           ${getSubnavList(components, 'components')}
         </div>
@@ -20,6 +27,13 @@ function headerVariant1({ component }) {
         </div>
         <a class="nav-item__control">
           <span class="nav-item__text">Pages</span>
+        </a>
+      </div>
+      <!-- END. nav-item -->
+      <!-- nav-item -->
+      <div class="nav-item">
+        <a href="./icons.html" class="nav-item__control">
+          <span class="nav-item__text">Icons</span>
         </a>
       </div>
       <!-- END. nav-item -->
