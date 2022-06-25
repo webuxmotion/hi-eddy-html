@@ -4,7 +4,7 @@
 }
 
 .hero__title {
-  background: linear-gradient(90deg, #520096 17.78%, #5ABCD6 59.99%, #5ABCD6 87.46%, #9747FF 110.26%);
+  background: linear-gradient(90deg, var(--primary-color-hover) 17.78%, #5ABCD6 59.99%, #5ABCD6 87.46%, #9747FF 110.26%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

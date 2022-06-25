@@ -21,7 +21,7 @@
 .tariff_card__days {
   text-align: center;
   font-weight: 700;
-  color: #520096;
+  color: var(--primary-color-hover);
 }
 .tariff_card__price {
   font-weight: 500;

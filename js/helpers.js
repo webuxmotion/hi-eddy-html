@@ -15,6 +15,7 @@ const components = [
   'course-card',
   'input',
   'group-title',
+  'title',
   'footer',
   'example',
 ];
@@ -149,7 +150,8 @@ function insertDocumentation() {
       code = `<div data-component="${componentFuncName}"${paramsCode}></div>`;
     } else {
       code = `<div 
-  data-component="${componentFuncName}"${paramsCode}
+  data-component="${componentFuncName}"
+${paramsCode}
 >
 </div>`;
     }

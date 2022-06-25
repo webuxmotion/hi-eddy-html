@@ -9,7 +9,7 @@
     margin: 5px 85px;
     font-size: 34px;
     font-weight: 600;
-    color: #520096;
+    color: var(--primary-color-hover);
 }
 
 .course-card__group {
@@ -69,7 +69,7 @@
 .course-card__footer-main-text {
     font-size: 22px;
     font-weight: 600;
-    color: #520096;
+    color: var(--primary-color-hover);
 }
 
 .course-card__footer-text {

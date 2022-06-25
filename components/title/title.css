@@ -1,0 +1,31 @@
+.title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-weight: 600;
+}
+
+h1.title {
+  font-size: 34px;
+  line-height: 38px;
+}
+
+h2.title {
+  font-size: 30px;
+}
+
+h3.title {
+  font-size: 26px;
+}
+
+h4.title {
+  font-size: 22px;
+}
+
+h5.title {
+  font-size: 18px;
+}
+
+h6.title {
+  font-size: 14px;
+}

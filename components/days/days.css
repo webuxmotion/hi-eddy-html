@@ -19,7 +19,7 @@
 }
 
 .days__day{
-  color: #520096;
+  color: var(--primary-color-hover);
   font-weight: 700;
   margin-top: 11px;
 } 
