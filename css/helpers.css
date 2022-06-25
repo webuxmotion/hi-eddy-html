@@ -8,6 +8,7 @@
   border-radius: 20px;
   background-color: antiquewhite;
   color: black;
+  overflow-x: auto;
 }
 
 .helpers-icons-list {
