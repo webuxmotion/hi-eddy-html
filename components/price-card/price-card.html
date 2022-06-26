@@ -16,25 +16,33 @@
   </head>
 
   <body>
-    <br />
 
-    <div style="width: 348px; padding: 20px">
+    <div style="width: 50%;">
+      <div data-doc-component="getPriceCard">
+        <h1>price-card</h1>
+      </div>
+
+      <div 
+        data-component="getPriceCard"
+        data-title=""
+        data-subtitle=""
+        data-image=""
+        data-buttontitle=""
+        data-href=""
+      >
+      </div>
+    </div>
+    
+
+    <div style="width: 50%;">
+      <div data-decorator="doc"></div>
       <div
         data-component="getPriceCard"
         data-title="10 днів"
         data-subtitle="Безкоштовно <br>10 діб"
-        data-button-title="Активувати"
+        data-buttontitle="Активувати"
         data-image="./img/10days.png"
       ></div>
-    </div>
-
-    <div style="display: flex">
-      <div style="width: 30%; padding: 20px">
-        <div data-component="priceCardVariant2"></div>
-      </div>
-      <div style="width: 30%; padding: 20px">
-        <div data-component="priceCardVariant3"></div>
-      </div>
     </div>
 
     <script src="./js/helpers.js"></script>
