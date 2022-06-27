@@ -8,6 +8,8 @@ const icons = [
   'courses',
   'saved',
   'check',
+  'check-simple',
+  'arrow-right',
   'external-link',
 ];
 
@@ -375,6 +377,22 @@ function langIcon() {
     <path d="M18.5 36C28.165 36 36 28.165 36 18.5C36 8.83502 28.165 1 18.5 1C8.83502 1 1 8.83502 1 18.5C1 28.165 8.83502 36 18.5 36Z" stroke="#9747FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M1 18.5H36" stroke="#9747FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M18.8368 1C23.2562 5.79212 25.7677 12.0111 25.9041 18.5C25.7677 24.9889 23.2562 31.2079 18.8368 36C14.4175 31.2079 11.906 24.9889 11.7695 18.5C11.906 12.0111 14.4175 5.79212 18.8368 1V1Z" stroke="#9747FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  `;
+}
+
+function arrowRightIcon() {
+  return `
+  <svg width="19" height="28" viewBox="0 0 19 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.878227 27.1213C-0.293345 25.9497 -0.293345 24.0503 0.878228 22.8787L9.75691 14L0.878229 5.12132C-0.293343 3.94975 -0.293343 2.05025 0.87823 0.878678C2.0498 -0.292894 3.9493 -0.292894 5.12087 0.878678L18.2422 14L5.12087 27.1213C3.94929 28.2929 2.0498 28.2929 0.878227 27.1213Z" fill="black"/>
+  </svg>
+  `;
+}
+
+function checkSimpleIcon() {
+  return `
+  <svg width="29" height="27" viewBox="0 0 29 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M27.1658 0.574235C28.5055 1.54911 28.8012 3.42544 27.8263 4.76514L13.1513 24.9318C12.5865 25.708 11.6843 26.167 10.7244 26.1666C9.76444 26.1662 8.86264 25.7065 8.29844 24.9298L0.973442 14.8465C-0.000348508 13.506 0.296916 11.6299 1.6374 10.6561C2.97789 9.68235 4.85398 9.97961 5.82777 11.3201L10.7277 18.0651L22.9749 1.2348C23.9498 -0.104898 25.8261 -0.400641 27.1658 0.574235Z" fill="black"/>
   </svg>
   `;
 }

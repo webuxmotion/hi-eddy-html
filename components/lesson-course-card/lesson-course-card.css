@@ -1,0 +1,100 @@
+.lesson-course-card {
+  display: flex;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+}
+
+.lesson-course-card__column--big {
+  flex-grow: 1;
+}
+
+.lesson-course-card__column--number {
+  width: 90px;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.lesson-course-card__number {
+  display: inline-flex;
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  height: 40px;
+  min-width: 40px;
+  padding: 0 5px;
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.lesson-course-card__icon svg path {
+  fill: white;
+}
+
+.lesson-course-card__status {
+  background-color: var(--secondary-color);
+  height: 100%;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.lesson-course-card__icon--success {
+  display: none;
+}
+
+.lesson-course-card--finished .lesson-course-card__status {
+  background-color: var(--success-color);
+}
+
+.lesson-course-card--finished .lesson-course-card__number {
+  background-color: var(--success-color);
+}
+
+.lesson-course-card--finished .lesson-course-card__status .lesson-course-card__icon--success {
+  display: block;
+}
+
+.lesson-course-card--finished .lesson-course-card__status .lesson-course-card__icon--wait {
+  display: none;
+}
+
+.lesson-course-card--saved .lesson-course-card__saved-icon {
+  display: block;
+}
+
+.lesson-course-card__content {
+  padding-bottom: 20px;
+  padding-top: 26px;
+  position: relative;
+}
+
+.lesson-course-card__footer {
+  display: flex;
+  align-items: center;
+}
+
+.lesson-course-card__saved-icon {
+  position: absolute;
+  top: -2px;
+  right: 30px;
+  display: none;
+}
+
+.lesson-course-card__title-wrapper {
+  margin-bottom: 15px;
+}
+
+.lesson-course-card__description {
+  margin-bottom: 25px;
+}
+
+.lesson-course-card__footer-column:not(:first-child) {
+  padding-left: 35px;
+}

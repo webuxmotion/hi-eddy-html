@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <base href="../../" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <title>HI-EDDY</title>
+  <style>
+    body {
+      opacity: 0;
+      transition: 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="page">
+    <!-- p-one-course -->
+    <div class="p-one-course">
+
+      <div 
+        data-component="getTitle"
+        data-title="Основи HTML + CSS."
+      >
+      </div>
+
+      <div class="p-one-course__lesson-card">
+        <div 
+          data-component="getLessonCourseCard"
+          data-title="Завантажуємо редактор коду"
+          data-description="Скачайте та встановіть цей редактор коду Visual Studio Code"
+          data-number="1"
+          data-href="./pages/one-lesson/one-lesson.html"
+          data-finished="true"
+        >
+        </div>
+      </div>
+      
+      <div class="p-one-course__lesson-card">
+        <div
+          data-component="getLessonCourseCard"
+          data-title="Створюємо просту web-сторінку"
+          data-description="Створіть папку my-site.
+                Наприклад, папку можна створити на робочому столі."
+          data-number="2"
+          data-href="./pages/one-lesson/one-lesson.html"
+          data-saved="true"
+        >
+        </div>
+      </div>
+      
+
+      
+
+    </div>
+    <!-- END. p-one-course -->
+  </div>
+
+  <script src="./js/helpers.js"></script>
+</body>
+
+</html>

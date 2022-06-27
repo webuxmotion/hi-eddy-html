@@ -5,7 +5,7 @@ function sidebarVariant1({ component }) {
       <div data-component="logoVariant1"></div>
       <div class="sidebar__group">
         <!-- sidebar-button -->
-        <a href="" class="sidebar-button">
+        <a href="./pages/lessons/lessons.html" class="sidebar-button">
           <span class="sidebar-button__icon" data-icon="lessons"></span>
           <span class="sidebar-button__text">Уроки</span>
         </a>

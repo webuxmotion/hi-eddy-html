@@ -18,11 +18,13 @@
   --button-active-shadow: inset 0px 0px 6px #FFFFFF;
 
   --danger-color: #EF5E43;
+  --success-color: #ADD137;
 
   --sidebar-width: 230px;
   --header-height: 70px;
 
   --padding-left: 80px;
+  --border-radius: 12px;
 
   --box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
 }

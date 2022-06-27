@@ -1,7 +1,7 @@
 function courseCardVariant1({ component }) {
   return `
   <!-- course-card -->
-  <div class="course-card">
+  <div class="course-card" data-name="${component}">
     <div class="course-card__group">
       <p>Програмування</p>
       <p class="course-card__main-text">Основи Javascript.</p>
@@ -30,7 +30,14 @@ function courseCardVariant1({ component }) {
         </span>
       </div>
       <div class="course-card__button-wrapper">
-      <button class="button button--border-radius button--fullwidth">Почати</button>
+        <div 
+          data-component="getButton"
+          data-title="Почати"
+          data-tag="a"
+          data-href="./pages/one-course/one-course.html"
+          data-classes="button--border-radius button--fullwidth"
+        >
+        </div>
       </div>
     </div>
     <div class="course-card__group">
