@@ -1,5 +1,7 @@
 const components = [
   'button',
+  'breadcrumbs',
+  'faq',
   'sidebar-button',
   'section-list',
   'sidebar',
@@ -8,6 +10,7 @@ const components = [
   'nav-item',
   'hero',
   'course-card',
+  'course-progress',
   'price-card',
   'lesson-card',
   'lesson-course-card',
@@ -16,6 +19,8 @@ const components = [
   'modal',
   'header',
   'prices',
+  'progress',
+  'program',
   'days',
   'tariff-card',
   'tariff-status',
@@ -28,11 +33,15 @@ const components = [
 const pages = [
   'home', 
   'prices', 
+  'payment',
   'courses', 
   'lessons',
   'profile',
   'one-lesson',
   'one-course',
+  'course-about',
+  'success',
+  'error',
   'example'
 ];
 
