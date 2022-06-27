@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <base href="../../" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <title>HI-EDDY</title>
+  <style>
+    body {
+      opacity: 0;
+      transition: 0.3s;
+    }
+  </style>
+</head>
+
+<body>
+  <br />
+  <div data-doc-component="getModal">
+    <h1>modal</h1>
+  </div>
+
+  <div data-decorator="doc"></div>
+  <div 
+    data-component="getModal" 
+    data-title="Доступ до курсу"
+    data-id="my-modal"
+  >
+    <p>
+      Щоб мати доступ до цього та інших курсів,
+      тобі треба увійти на сайт та вибрати один з
+      тарифних планів.
+    </p>
+    <p>
+      Також серед тарифних планів, ти можеш обрати
+      10-денний безкоштовний тарифний план.
+    </p>
+    <div 
+      data-component="getButton"
+      data-title="ТАРИФНІ ПЛАНИ"
+      data-tag="a"
+      data-href="./pages/prices/prices.html"
+      data-classes="button--border-radius"
+    >
+    </div>
+    <div 
+      data-component="getButton"
+      data-title="СПРОБУВАТИ БЕЗКОШТОВНО"
+      data-tag="a"
+      data-href="./pages/prices/prices.html"
+      data-classes="button--border-radius button--bordered"
+    >
+    </div>
+  </div>
+  <button onclick="showModal('my-modal')">Show modal</button>
+
+  <script src="./js/helpers.js"></script>
+</body>
+
+</html>

@@ -13,8 +13,9 @@ function getButtonParamsKeys() {
 }
 
 function getButton(params) {
-  const { title, iconleft, iconright, classes, tag, href, disabled, iconleftclasses, iconrightclasses } = extractParams(params, getButtonParamsKeys());
+  const { title: titleParam, iconleft, iconright, classes, tag, href, disabled, iconleftclasses, iconrightclasses } = extractParams(params, getButtonParamsKeys());
 
+  const title = titleParam === 'test-title' ? '' : titleParam;
   const tagName = tag === 'test-tag'
     ? 'button'
     : tag;
@@ -39,7 +40,7 @@ function getButton(params) {
     ? '' 
     : `<span class="button__icon ${additionalIconrightclasses}" data-icon="${iconright}"></span>`;
 
-  const buttonTextElement = `<span class="button__text">${title}</span>`;
+  const buttonTextElement = title && `<span class="button__text">${title}</span>`;
 
   const additionalClasses = classes === 'test-classes' ? '' : classes;
 

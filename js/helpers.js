@@ -13,6 +13,7 @@ const components = [
   'lesson-course-card',
   'logo',
   'lang-switcher',
+  'modal',
   'header',
   'prices',
   'days',
@@ -42,6 +43,7 @@ loadComponents(() => {
   insertComponents();
   insertDocumentation();
   loadIconsScript();
+  loadEventsScript();
   loadStyles(() => {
     document.body.style.opacity = 1;
   });
@@ -70,13 +72,21 @@ function insertComponents() {
 
   elements.forEach((el) => {
     const trimmed = el.innerHTML.replace(/^\s+|\s+$/gm, '');
-    if (!trimmed) {
-      const stringFunction = el.dataset.component;
+
+    const stringFunction = el.dataset.component;
 
       if (el.parentNode) {
+
+        let content;
+
+        if (trimmed) {
+          content = trimmed;
+        }
+
         try {
           el.outerHTML = window[stringFunction]({
             ...el.dataset,
+            content,
           });
           insertComponents();
         } catch (err) {
@@ -84,7 +94,6 @@ function insertComponents() {
           console.log(err);
         }
       }
-    }
   });
 }
 
@@ -235,6 +244,16 @@ function loadIconsScript() {
     //do stuff with the script
   };
   script.src = './js/icons.js';
+
+  document.body.appendChild(script);
+}
+
+function loadEventsScript() {
+  var script = document.createElement('script');
+  script.onload = function () {
+    //do stuff with the script
+  };
+  script.src = './js/events.js';
 
   document.body.appendChild(script);
 }

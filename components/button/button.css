@@ -75,9 +75,22 @@
   box-shadow: var(--button-active-shadow);
 }
 
+.button--transparent {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.button--transparent:hover {
+  background-color: var(--transparent-hover);
+}
+
 .button__icon+.button__text,
 .button__text+.button__icon {
   margin-left: 10px;
+}
+
+.button__icon svg {
+  display: block;
 }
 
 .button__icon svg,

@@ -1,12 +1,13 @@
 .title {
-  display: flex;
-  width: 100%;
-  align-items: center;
   font-weight: 600;
 }
 
 .title--weight-normal {
   font-weight: normal;
+}
+
+.title--centered {
+  text-align: center;
 }
 
 h1.title {
