@@ -12,9 +12,7 @@
         transition: 0.3s;
       }
       .index-page {
-        display: flex;
-        flex-direction: column;
-        min-height: calc(100vh - 70px);
+        padding: 20px;
       }
       .index-page__content {
         display: flex;
@@ -22,11 +20,73 @@
         align-items: center;
         justify-content: center;
       }
+      .index-page__links {
+        position: relative;
+        display: inline-flex;
+      }
+      .index-page__links img {
+        width: 600px;
+      }
+      .index-page__links-inner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      .index-page__link {
+        position: absolute;
+        display: flex;
+        background-color: rgb(77 255 0 / 40%);
+        border: 1px solid green;
+        font-size: 10px;
+        align-items: center;
+        justify-content: center;
+        color: black;
+      }
+      .index-page__link:hover {
+        background-color: rgb(77 255 0 / 20%);
+      }
       
     </style>
   </head>
   <body>
     <div class="index-page">
+      <div class="index-page__links">
+        <img src="./img/content-home-page.jpg" alt="">
+        <div class="index-page__links-inner">
+          <a 
+            href="./components/hero/hero.html" 
+            class="index-page__link"
+            style="width: 79%; height: 15%; left: 18%; top: 2%;"
+          >hero</a>
+          <a 
+            href="./components/sidebar/sidebar.html" 
+            class="index-page__link"
+            style="width: 16%; height: 19%; left: 0%; top: 0%;"
+          >sidebar</a>
+          <a 
+            href="./components/logo/logo.html" 
+            class="index-page__link"
+            style="width: 16%; height: 1.6%; left: 0%; top: 0%;"
+          >logo</a>
+          <a 
+            href="./components/sidebar-button/sidebar-button.html" 
+            class="index-page__link"
+            style="width: 16%; height: 1.4%; left: 0%; top: 5.6%;"
+          >sidebar-button</a>
+          <a 
+            href="./components/button/button.html" 
+            class="index-page__link"
+            style="width: 19%; height: 1.3%; left: 21.24%; top: 8.4%;"
+          >button</a>
+          <a 
+            href="./components/course-card/course-card.html" 
+            class="index-page__link"
+            style="width: 79%; height: 6.6%; left: 17.24%; top: 22.5%;"
+          >course-card</a>
+        </div>
+      </div>
       <div class="index-page__content">
         <img style="width: 200px;" src="./img/dog-with-sign.svg" alt="hieddy sith sign">
         <div style="margin-bottom: 60px; margin-left: 50px; width: 200px;">
