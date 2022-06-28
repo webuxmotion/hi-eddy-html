@@ -1,0 +1,71 @@
+.copy-button {
+
+}
+
+.copy-button__button {
+  border: 1px solid var(--border-color);
+  background-color: transparent;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.copy-button__button:hover {
+  background-color: var(--transparent-hover);
+}
+
+.copy-button__button:active {
+  box-shadow: var(--button-active-shadow);
+}
+
+.copy-button__button svg path {
+  fill: var(--primary-color);
+}
+
+.copy-button__button svg {
+  display: block;
+  width: 16px;
+  height: auto;
+}
+
+.copy-button__tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.copy-button__tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 118%;
+  left: 50%;
+  margin-left: -70px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.copy-button__tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.copy-button__tooltip:hover .copy-button__tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.copy-button__input {
+  display: none;
+}

@@ -1,3 +1,7 @@
 .p-payment {
   padding: 50px;
 }
+
+.p-payment__header {
+  padding-bottom: 40px;
+}

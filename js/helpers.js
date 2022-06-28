@@ -2,6 +2,7 @@ const components = [
   'button',
   'breadcrumbs',
   'faq',
+  'copy-button',
   'sidebar-button',
   'section-list',
   'sidebar',
