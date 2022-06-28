@@ -1,6 +1,9 @@
 const icons = [
   'ua-flag',
   'logo',
+  'close',
+  'plus',
+  'minus',
   'paw',
   'user',
   'lessons',
@@ -15,6 +18,22 @@ const icons = [
 
 insertIcons();
 insertIconsDoc();
+
+function minusIcon() {
+  return `
+  <svg width="23" height="3" viewBox="0 0 23 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 1.5C0.5 0.671573 1.17157 0 2 0H21.5C22.3284 0 23 0.671573 23 1.5C23 2.32843 22.3284 3 21.5 3H2C1.17157 3 0.5 2.32843 0.5 1.5Z" fill="black"/>
+  </svg>
+  `;
+}
+
+function plusIcon() {
+  return `
+  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.5C12.8284 0.5 13.5 1.17157 13.5 2V10H21.5C22.3284 10 23 10.6716 23 11.5C23 12.3284 22.3284 13 21.5 13H13.5V21.5C13.5 22.3284 12.8284 23 12 23C11.1716 23 10.5 22.3284 10.5 21.5V13H2C1.17157 13 0.5 12.3284 0.5 11.5C0.5 10.6716 1.17157 10 2 10H10.5V2C10.5 1.17157 11.1716 0.5 12 0.5Z" fill="black"/>
+  </svg>
+  `;
+}
 
 function closeIcon() {
   return `

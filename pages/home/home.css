@@ -5,3 +5,13 @@
 .p-home__card {
     padding: 20px;
 }
+
+.p-home__faq {
+    padding-left: var(--padding-left);
+    padding-right: var(--padding-left);
+    padding-bottom: 50px;
+}
+
+.p-home__faq-title {
+    padding-bottom: 30px;
+}
