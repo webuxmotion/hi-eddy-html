@@ -21,6 +21,7 @@ const components = [
   'prices',
   'progress',
   'program',
+  'payment',
   'days',
   'tariff-card',
   'tariff-status',

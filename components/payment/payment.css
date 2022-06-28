@@ -1,0 +1,19 @@
+.payment {
+  display: grid;
+  grid-template-columns: 360px auto;
+}
+
+.payment__tariff-card {
+    width: 360px;
+}
+
+.payment__tariff-card-image {
+    padding-bottom: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.payment__column--main {
+    padding-left: 60px;
+}
