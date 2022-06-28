@@ -4,7 +4,7 @@ function courseCardVariant1({ component }) {
   <div class="course-card" data-name="${component}">
     <div class="course-card__group">
       <p>Програмування</p>
-      <p class="course-card__main-text">Основи Javascript.</p>
+      <p class="course-card__main-text">Основи HTML + CSS.</p>
       <p>Вчимося писати код.</p>
       <div class="course-card__group-span">
         <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,9 +41,9 @@ function courseCardVariant1({ component }) {
       </div>
     </div>
     <div class="course-card__group">
-      <p class="course-card__text">Команда Eddy складається зі спеціалістів, які вміють розвивати як технічні
-        навички, так і особистісні якості. Наші тренери працюють в IT і мають не тільки хороші теоретичні,
-        але й практичні знання. Вони знають, що зараз актуально на ринку, і дійсно мають чим поділитися.</p>
+      <p class="course-card__text">
+        Будемо чесні: ми не обіцяємо, що після цього курсу ви знайдете свою першу роботу. Максимум, що ви отримаєте - це готову верстку для інтернет-магазину овочів та фруктів. В кінці курсу в якості бонусу ми покажемо, як можна розмістити цей сайт в інтернеті. Тоді ви зможете в своєму портфоліо вставити посилання на сайт, який ви зробите.
+      </p>
     </div>
     <div class="course-card__group">
       <img class="course-card__image" src="./img/course-java.png" alt="">

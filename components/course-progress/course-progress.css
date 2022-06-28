@@ -1,3 +1,9 @@
 .course-progress {
-  
+  background-color: #EFF3F5;
+  border-radius: var(--border-radius);
+  padding: 45px 30px;
+}
+
+.course-progress__row:not(:last-child) {
+  padding-bottom: 40px;
 }

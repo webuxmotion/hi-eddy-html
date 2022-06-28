@@ -14,6 +14,7 @@
   justify-content: flex-end;
   padding-top: 20px;
   padding-right: 20px;
+  flex-shrink: 0;
 }
 
 .lesson-course-card__number {
@@ -78,6 +79,8 @@
 .lesson-course-card__footer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-right: 34px;
 }
 
 .lesson-course-card__saved-icon {

@@ -1,3 +1,27 @@
 .progress {
-  
+
+}
+
+.progress__background {
+  height: 5px;
+  border-radius: 10px;
+  background-color: #D9D9D9;
+  position: relative;
+}
+
+.progress__green-line {
+  border-radius: 10px;
+  background-color: var(--success-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.progress__header {
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-bottom: 10px;
 }

@@ -1,7 +1,22 @@
 .p-one-course {
   padding: 50px;
+  padding-top: 38px;
 }
 
-.p-one-course__lesson-card {
-  padding: 20px;
+.p-one-course__header {
+  padding-top: 22px;
+  padding-bottom: 30px;
+}
+
+.p-one-course__lesson-card:not(:last-child) {
+  padding-bottom: 40px;
+}
+
+.p-one-course__body {
+  display: flex;
+}
+
+.p-one-course__sidebar {
+  width: 400px;
+  padding-left: 40px;
 }

@@ -1,22 +1,30 @@
 function getCourseProgressParamsKeys() {
-  return ['title'];
+  return [];
 }
 
 function getCourseProgress(params) {
-  const { title } = extractParams(params, getCourseProgressParamsKeys());
+  const {} = extractParams(params, getCourseProgressParamsKeys());
 
   return `
     <!-- course-progress -->
     <div class="course-progress" data-name="${params.component}">
-      <div 
-        data-component="getProgress"
-        data-progress="20"
-      >
+      <div class="course-progress__row">
+        <div 
+          data-component="getProgress"
+          data-progress="70"
+          data-titleleft="Курс завершено"
+          data-titleright="70%"
+        >
+        </div>
       </div>
-      <div 
-        data-component="getProgress"
-        data-progress="30"
-      >
+      <div class="course-progress__row">
+        <div 
+          data-component="getProgress"
+          data-progress="20"
+          data-titleleft="Пройдено тестових питань"
+          data-titleright="2/5"
+        >
+        </div>
       </div>
     </div>
     <!-- END. course-progress -->

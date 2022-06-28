@@ -22,35 +22,57 @@
     <div class="p-one-course">
 
       <div 
-        data-component="getTitle"
-        data-title="Основи HTML + CSS."
+        data-component="getBreadcrumbs"
+        data-list1Title1="Курси"
+        data-list1Href1="./pages/courses/courses.html"
+        data-list1Title2="Основи HTML + CSS."
+        data-list1Href2="./pages/one-course/one-course.html"
       >
       </div>
 
-      <div class="p-one-course__lesson-card">
+      <div class="p-one-course__header">
         <div 
-          data-component="getLessonCourseCard"
-          data-title="Завантажуємо редактор коду"
-          data-description="Скачайте та встановіть цей редактор коду Visual Studio Code"
-          data-number="1"
-          data-href="./pages/one-lesson/one-lesson.html"
-          data-finished="true"
+          data-component="getTitle"
+          data-title="Основи HTML + CSS."
         >
         </div>
       </div>
+
+      <div class="p-one-course__body">
+        <div>
+          <div class="p-one-course__lesson-card">
+            <div 
+              data-component="getLessonCourseCard"
+              data-title="Завантажуємо редактор коду"
+              data-description="Скачайте та встановіть цей редактор коду Visual Studio Code"
+              data-number="1"
+              data-href="./pages/one-lesson/one-lesson.html"
+              data-finished="true"
+            >
+            </div>
+          </div>
+          
+          <div class="p-one-course__lesson-card">
+            <div
+              data-component="getLessonCourseCard"
+              data-title="Створюємо просту web-сторінку"
+              data-description="Створіть папку my-site.
+                    Наприклад, папку можна створити на робочому столі."
+              data-number="2"
+              data-href="./pages/one-lesson/one-lesson.html"
+              data-saved="true"
+            >
+            </div>
+          </div>
+        </div>
+        <div class="p-one-course__sidebar">
+          <div data-component="getCourseProgress"></div>
+        </div>
+      </div>
+
       
-      <div class="p-one-course__lesson-card">
-        <div
-          data-component="getLessonCourseCard"
-          data-title="Створюємо просту web-сторінку"
-          data-description="Створіть папку my-site.
-                Наприклад, папку можна створити на робочому столі."
-          data-number="2"
-          data-href="./pages/one-lesson/one-lesson.html"
-          data-saved="true"
-        >
-        </div>
-      </div>
+
+      
       
 
       
