@@ -100,9 +100,9 @@
 }
 
 .button__icon--dark svg path {
-  stroke: var(--primary-color);
+  fill: var(--primary-color);
 }
 
 .button__icon--light svg path {
-  stroke: white;
+  fill: white;
 }

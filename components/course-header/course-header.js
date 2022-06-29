@@ -13,12 +13,14 @@ function getCourseHeader(params) {
 
         <div class="course-header__description">${description}</div>
 
-        <div 
-          data-component="getButton"
-          data-title="Почати"
-          data-classes="button--border-radius"
-          data-onclick="showModal('course-modal')"
-        >
+        <div class="course-header__button-wrapper">
+          <div 
+            data-component="getButton"
+            data-title="Почати"
+            data-classes="button--border-radius button--fullwidth"
+            data-onclick="showModal('course-modal')"
+          >
+          </div>
         </div>
       </div>
 

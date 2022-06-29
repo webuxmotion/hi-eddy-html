@@ -57,3 +57,8 @@
 .course-header__description {
   padding-bottom: 15px;
 }
+
+.course-header__button-wrapper {
+  width: 100%;
+  max-width: 200px;
+}

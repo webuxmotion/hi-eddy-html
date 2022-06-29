@@ -17,6 +17,7 @@ const components = [
   'course-header',
   'price-card',
   'lesson-card',
+  'lesson-header',
   'lesson-course-card',
   'logo',
   'lang-switcher',

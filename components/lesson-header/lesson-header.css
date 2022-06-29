@@ -1,0 +1,60 @@
+.lesson-header {
+  display: flex;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+}
+
+.lesson-header__image-column {
+  flex-shrink: 0;
+  width: 30%;
+  max-width: 350px;
+  min-width: 200px;
+  padding-left: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.lesson-header__image {
+  padding-bottom: 70%;
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.lesson-header__description p {
+  font-size: 20px;
+}
+
+.lesson-header__description {
+  padding-top: 70px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  position: relative;
+}
+
+.lesson-header__label {
+  background-color: #5BBDD7;
+  position: absolute;
+  top: 0;
+  left: 70px;
+  padding: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  color: white;
+  font-size: 16px;
+  max-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lesson-header__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}

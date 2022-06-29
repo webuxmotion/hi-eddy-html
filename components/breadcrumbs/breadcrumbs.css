@@ -13,12 +13,12 @@
 }
 
 .breadcrumbs__icon {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .breadcrumbs__icon svg {
-  width: 6px;
+  width: 10px;
   height: auto;
 }
 

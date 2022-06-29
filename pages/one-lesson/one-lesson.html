@@ -21,24 +21,279 @@
     <!-- p-one-lesson -->
     <div class="p-one-lesson">
 
-      <div 
+      <div
         data-component="getBreadcrumbs"
         data-list1Title1="Курси"
         data-list1Href1="./pages/courses/courses.html"
         data-list1Title2="Основи HTML + CSS."
         data-list1Href2="./pages/one-course/one-course.html"
-        data-list1Title3="Створюємо просту web-сторінку"
+        data-list1Title3="Урок 2. Створюємо просту web-сторінку"
         data-list1Href3="./pages/one-lesson/one-lesson.html"
       >
+      </div>
+
+      <div class="p-one-lesson__top-buttons">
+        <div class="p-one-lesson__top-buttons-column">
+          <div 
+            data-component="getButton"
+            data-iconleft="left-arrow"
+            data-tag="a"
+            data-href="./pages/one-course/one-course.html"
+            data-iconleftclasses="button__icon--dark"
+            data-classes="button--border-radius button--bordered"
+          ></div>
+        </div>
+        <div class="p-one-lesson__top-buttons-column">
+          <div class="p-one-lesson__top-button-wrapper">
+            <div 
+              data-component="getButton"
+              data-iconleft="saved"
+              data-iconleftclasses="button__icon--dark"
+              data-classes="button--border-radius button--bordered"
+            ></div>
+          </div>
+          <div 
+            data-component="getButton"
+            data-iconleft="check"
+            data-iconleftclasses="button__icon--dark"
+            data-classes="button--border-radius button--bordered"
+          ></div>
+        </div>
+        
       </div>
 
       <div class="p-one-lesson__header">
         <div
           data-component="getTitle"
-          data-title="Створюємо просту web-сторінку"
+          data-title="Урок 2. Створюємо просту web-сторінку"
         >
         </div>
       </div>
+
+      <div class="p-one-lesson__card">
+        <div 
+          data-component="getLessonHeader"
+          data-image="./img/content-lesson-card.jpg"
+          data-description="<p>В цьому уроці ми будемо створювати елемент для вибору року.</p><p>Спочатку зробимо його за допомогою HTML, а потім будемо додавати додаткові роки за допомогою JavaScript.</p>"
+          data-label="Курс: Основи HTML + CSS. Створюємо магазин офочів та фруктів."
+        >
+        </div>
+      </div>
+
+      <div class="p-one-lesson__content">
+        <h3>Давайте почнемо! Виконуйте урок крок за кроком:</h3>
+
+        <ol>
+          <li>
+            <p>
+              Створіть папку з проектом, відкрийте проект за допомогою
+              Visual Studio Code, створіть файл index.html та відкрійте
+              його в браузері.
+            </p>
+            <p>
+              Якщо ви ніколи такого не робили, то пройдіть спочатку
+              <a href="https://www.hi-eddy.com/lessons/create-simple-html-page" target="_blank">
+              цей урок
+              </a>.
+            </p>
+          </li>
+        
+          <li>
+            <p>
+              Вставте цей код між відкриваючим та закриваючим тегами <b>body</b>:
+            </p>
+    <pre><code class="language-php hljs">&lt;select name=<span class="hljs-string">"select"</span> id=<span class="hljs-string">"year-select"</span>&gt;
+  &lt;option value=<span class="hljs-string">"2000"</span>&gt;<span class="hljs-number">2000</span>&lt;/option&gt;
+  &lt;option value=<span class="hljs-string">"2001"</span>&gt;<span class="hljs-number">2001</span>&lt;/option&gt;
+  &lt;option value=<span class="hljs-string">"2002"</span>&gt;<span class="hljs-number">2002</span>&lt;/option&gt;
+  &lt;option value=<span class="hljs-string">"2003"</span> selected&gt;<span class="hljs-number">2003</span>&lt;/option&gt;
+  &lt;option value=<span class="hljs-string">"2004"</span>&gt;<span class="hljs-number">2004</span>&lt;/option&gt;
+  &lt;option value=<span class="hljs-string">"2005"</span>&gt;<span class="hljs-number">2005</span>&lt;/option&gt;
+  &lt;option value=<span class="hljs-string">"2006"</span>&gt;<span class="hljs-number">2006</span>&lt;/option&gt;
+  &lt;option value=<span class="hljs-string">"2007"</span>&gt;<span class="hljs-number">2007</span>&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+            <p>
+              Тепер ваш файл index.html має виглядати якось так:
+            </p>
+    <pre><code class="language-php hljs">&lt;!DOCTYPE html&gt;
+&lt;html lang=<span class="hljs-string">"en"</span>&gt;
+  &lt;head&gt;
+    &lt;meta charset=<span class="hljs-string">"UTF-8"</span> /&gt;
+    &lt;meta http-equiv=<span class="hljs-string">"X-UA-Compatible"</span> content=<span class="hljs-string">"IE=edge"</span> /&gt;
+    &lt;meta name=<span class="hljs-string">"viewport"</span> content=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span> /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;select name=<span class="hljs-string">"select"</span> id=<span class="hljs-string">"year-select"</span>&gt;
+      &lt;option value=<span class="hljs-string">"2000"</span>&gt;<span class="hljs-number">2000</span>&lt;/option&gt;
+      &lt;option value=<span class="hljs-string">"2001"</span>&gt;<span class="hljs-number">2001</span>&lt;/option&gt;
+      &lt;option value=<span class="hljs-string">"2002"</span>&gt;<span class="hljs-number">2002</span>&lt;/option&gt;
+      &lt;option value=<span class="hljs-string">"2003"</span> selected&gt;<span class="hljs-number">2003</span>&lt;/option&gt;
+      &lt;option value=<span class="hljs-string">"2004"</span>&gt;<span class="hljs-number">2004</span>&lt;/option&gt;
+      &lt;option value=<span class="hljs-string">"2005"</span>&gt;<span class="hljs-number">2005</span>&lt;/option&gt;
+      &lt;option value=<span class="hljs-string">"2006"</span>&gt;<span class="hljs-number">2006</span>&lt;/option&gt;
+      &lt;option value=<span class="hljs-string">"2007"</span>&gt;<span class="hljs-number">2007</span>&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+          </li>
+        
+          <li>
+            <p>
+              Збережіть файл та перезавантажте браузер на тій вкладці, де в вас 
+              відкрита index.html-сторінка.
+            </p>
+            <p>
+              Ви маєте побачити в браузері елемент з вибором року. За замовчуванням 
+              активний рік має значення 2003. За це відповідає атрибут 
+              <b>selected</b> для елементу option.
+            </p>
+          </li>
+          <li>
+            <h3>
+              Тепер давайте додамо ще два елементи option в елемент для вибору року.
+        </h3>
+            <p>
+              Це будуть роки 2008 та 2009.
+            </p>
+            <p>І зробим ми це за допомогою JavaScript.</p>
+        
+            <p>
+              Вставте цей код перед закриваючим тегом body:
+            </p>
+    <pre><code class="language-php hljs">&lt;script&gt;
+  <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">yearSelectElement</span> = document.<span class="hljs-title function_ invoke__">getElementById</span>(<span class="hljs-string">'year-select'</span>);
+
+  <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">optionElement</span> = document.<span class="hljs-title function_ invoke__">createElement</span>(<span class="hljs-string">'option'</span>);
+  optionElement.<span class="hljs-title function_ invoke__">setAttribute</span>(<span class="hljs-string">'value'</span>, <span class="hljs-number">2008</span>);
+  optionElement.innerHTML = <span class="hljs-number">2008</span>;
+
+  <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">optionElement2</span> = document.<span class="hljs-title function_ invoke__">createElement</span>(<span class="hljs-string">'option'</span>);
+  optionElement2.<span class="hljs-title function_ invoke__">setAttribute</span>(<span class="hljs-string">'value'</span>, <span class="hljs-number">2009</span>);
+  optionElement2.innerHTML = <span class="hljs-number">2009</span>;
+
+  yearSelectElement.<span class="hljs-title function_ invoke__">insertAdjacentElement</span>(<span class="hljs-string">'beforeEnd'</span>, optionElement);
+  yearSelectElement.<span class="hljs-title function_ invoke__">insertAdjacentElement</span>(<span class="hljs-string">'beforeEnd'</span>, optionElement2);
+&lt;/script&gt;
+</code></pre>  
+            <p>
+              Тепер ваш файл index.html має виглядати якось так:
+            </p>
+    <pre><code class="language-php hljs">&lt;!DOCTYPE html&gt;
+&lt;html lang=<span class="hljs-string">"en"</span>&gt;
+  &lt;head&gt;
+    &lt;meta charset=<span class="hljs-string">"UTF-8"</span> /&gt;
+    &lt;meta http-equiv=<span class="hljs-string">"X-UA-Compatible"</span> content=<span class="hljs-string">"IE=edge"</span> /&gt;
+    &lt;meta name=<span class="hljs-string">"viewport"</span> content=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span> /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;select name=<span class="hljs-string">"select"</span> id=<span class="hljs-string">"year-select"</span>&gt;
+      &lt;option value=<span class="hljs-string">"2000"</span>&gt;<span class="hljs-number">2000</span>&lt;/option&gt;
+      &lt;option value=<span class="hljs-string">"2001"</span>&gt;<span class="hljs-number">2001</span>&lt;/option&gt;
+      &lt;option value=<span class="hljs-string">"2002"</span>&gt;<span class="hljs-number">2002</span>&lt;/option&gt;
+      &lt;option value=<span class="hljs-string">"2003"</span> selected&gt;<span class="hljs-number">2003</span>&lt;/option&gt;
+      &lt;option value=<span class="hljs-string">"2004"</span>&gt;<span class="hljs-number">2004</span>&lt;/option&gt;
+      &lt;option value=<span class="hljs-string">"2005"</span>&gt;<span class="hljs-number">2005</span>&lt;/option&gt;
+      &lt;option value=<span class="hljs-string">"2006"</span>&gt;<span class="hljs-number">2006</span>&lt;/option&gt;
+      &lt;option value=<span class="hljs-string">"2007"</span>&gt;<span class="hljs-number">2007</span>&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;script&gt;
+      <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">yearSelectElement</span> = document.<span class="hljs-title function_ invoke__">getElementById</span>(<span class="hljs-string">'year-select'</span>);
+
+      <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">optionElement</span> = document.<span class="hljs-title function_ invoke__">createElement</span>(<span class="hljs-string">'option'</span>);
+      optionElement.<span class="hljs-title function_ invoke__">setAttribute</span>(<span class="hljs-string">'value'</span>, <span class="hljs-number">2008</span>);
+      optionElement.innerHTML = <span class="hljs-number">2008</span>;
+
+      <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">optionElement2</span> = document.<span class="hljs-title function_ invoke__">createElement</span>(<span class="hljs-string">'option'</span>);
+      optionElement2.<span class="hljs-title function_ invoke__">setAttribute</span>(<span class="hljs-string">'value'</span>, <span class="hljs-number">2009</span>);
+      optionElement2.innerHTML = <span class="hljs-number">2009</span>;
+
+      yearSelectElement.<span class="hljs-title function_ invoke__">insertAdjacentElement</span>(<span class="hljs-string">'beforeEnd'</span>, optionElement);
+      yearSelectElement.<span class="hljs-title function_ invoke__">insertAdjacentElement</span>(<span class="hljs-string">'beforeEnd'</span>, optionElement2);
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>  </li>
+        
+          <li>
+            <p>
+              Подивіться в браузері - тепер в селекті стало на два елемента більше.
+            </p>
+          </li>
+        
+          <li>
+            <h3>
+              Тепер додамо ще більше елементів в наш селект за допомогою js.
+            </h3>
+        
+            <p>
+              Вставте цей код перед закриваючим тегом <b>script</b>:
+            </p>
+            <pre><code class="language-js hljs language-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> year = <span class="hljs-number">2010</span>; year &lt;= <span class="hljs-number">2100</span>; year++) {
+          <span class="hljs-keyword">const</span> optionElement = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">'option'</span>);
+          optionElement.<span class="hljs-title function_">setAttribute</span>(<span class="hljs-string">'value'</span>, year);
+          optionElement.<span class="hljs-property">innerHTML</span> = year;
+        
+          yearSelectElement.<span class="hljs-title function_">insertAdjacentElement</span>(<span class="hljs-string">'beforeEnd'</span>, optionElement);
+        }
+        </code></pre>  
+            <p>
+              Тепер ваш файл index.html має виглядати якось так:
+            </p>
+            <pre><code class="language-php hljs">&lt;!DOCTYPE html&gt;
+        &lt;html lang=<span class="hljs-string">"en"</span>&gt;
+          &lt;head&gt;
+            &lt;meta charset=<span class="hljs-string">"UTF-8"</span> /&gt;
+            &lt;meta http-equiv=<span class="hljs-string">"X-UA-Compatible"</span> content=<span class="hljs-string">"IE=edge"</span> /&gt;
+            &lt;meta name=<span class="hljs-string">"viewport"</span> content=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span> /&gt;
+            &lt;title&gt;Document&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;select name=<span class="hljs-string">"select"</span> id=<span class="hljs-string">"year-select"</span>&gt;
+              &lt;option value=<span class="hljs-string">"2000"</span>&gt;<span class="hljs-number">2000</span>&lt;/option&gt;
+              &lt;option value=<span class="hljs-string">"2001"</span>&gt;<span class="hljs-number">2001</span>&lt;/option&gt;
+              &lt;option value=<span class="hljs-string">"2002"</span>&gt;<span class="hljs-number">2002</span>&lt;/option&gt;
+              &lt;option value=<span class="hljs-string">"2003"</span> selected&gt;<span class="hljs-number">2003</span>&lt;/option&gt;
+              &lt;option value=<span class="hljs-string">"2004"</span>&gt;<span class="hljs-number">2004</span>&lt;/option&gt;
+              &lt;option value=<span class="hljs-string">"2005"</span>&gt;<span class="hljs-number">2005</span>&lt;/option&gt;
+              &lt;option value=<span class="hljs-string">"2006"</span>&gt;<span class="hljs-number">2006</span>&lt;/option&gt;
+              &lt;option value=<span class="hljs-string">"2007"</span>&gt;<span class="hljs-number">2007</span>&lt;/option&gt;
+            &lt;/select&gt;
+        
+            &lt;script&gt;
+              <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">yearSelectElement</span> = document.<span class="hljs-title function_ invoke__">getElementById</span>(<span class="hljs-string">'year-select'</span>);
+        
+              <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">optionElement</span> = document.<span class="hljs-title function_ invoke__">createElement</span>(<span class="hljs-string">'option'</span>);
+              optionElement.<span class="hljs-title function_ invoke__">setAttribute</span>(<span class="hljs-string">'value'</span>, <span class="hljs-number">2008</span>);
+              optionElement.innerHTML = <span class="hljs-number">2008</span>;
+        
+              <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">optionElement2</span> = document.<span class="hljs-title function_ invoke__">createElement</span>(<span class="hljs-string">'option'</span>);
+              optionElement2.<span class="hljs-title function_ invoke__">setAttribute</span>(<span class="hljs-string">'value'</span>, <span class="hljs-number">2009</span>);
+              optionElement2.innerHTML = <span class="hljs-number">2009</span>;
+        
+              yearSelectElement.<span class="hljs-title function_ invoke__">insertAdjacentElement</span>(<span class="hljs-string">'beforeEnd'</span>, optionElement);
+              yearSelectElement.<span class="hljs-title function_ invoke__">insertAdjacentElement</span>(<span class="hljs-string">'beforeEnd'</span>, optionElement2);
+        
+              <span class="hljs-keyword">for</span> (let year = <span class="hljs-number">2010</span>; year &lt;= <span class="hljs-number">2100</span>; year++) {
+                <span class="hljs-keyword">const</span> <span class="hljs-variable constant_">optionElement</span> = document.<span class="hljs-title function_ invoke__">createElement</span>(<span class="hljs-string">'option'</span>);
+                optionElement.<span class="hljs-title function_ invoke__">setAttribute</span>(<span class="hljs-string">'value'</span>, year);
+                optionElement.innerHTML = year;
+        
+                yearSelectElement.<span class="hljs-title function_ invoke__">insertAdjacentElement</span>(<span class="hljs-string">'beforeEnd'</span>, optionElement);
+              }
+            &lt;/script&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+        </code></pre>  </li>
+        </ol>
+
+        <h3>Вітаю! Ви зробили елемент для вибору року та навчились створювати та додавати нові елементи за допомогою javascript.</h3>
+      </div>
+      
 
     </div>
     <!-- END. p-one-lesson -->
