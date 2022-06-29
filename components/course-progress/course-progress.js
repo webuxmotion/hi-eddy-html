@@ -12,7 +12,7 @@ function getCourseProgress(params) {
         <div 
           data-component="getProgress"
           data-progress="70"
-          data-titleleft="Курс завершено"
+          data-titleleft="Курс завершено на"
           data-titleright="70%"
         >
         </div>

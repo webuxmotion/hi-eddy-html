@@ -17,6 +17,11 @@
     font-weight: 500;
 }
 
+.course-card__group:nth-child(2) {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
 .course-card__image {
   max-width: 100%;
 }
@@ -54,8 +59,13 @@
     margin-top: 93px;
 }
 
+.course-card__buttons {
+    display: flex;
+}
+
 .course-card__button-wrapper {
-    width: 160px;
+    margin-right: 15px;
+    white-space: nowrap;
 }
 
 .course-card__footer-left {

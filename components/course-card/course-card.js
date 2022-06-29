@@ -29,14 +29,26 @@ function courseCardVariant1({ component }) {
           </svg>24 уроки
         </span>
       </div>
-      <div class="course-card__button-wrapper">
-        <div 
-          data-component="getButton"
-          data-title="Вибрати"
-          data-tag="a"
-          data-href="./pages/course-about/course-about.html"
-          data-classes="button--border-radius button--fullwidth"
-        >
+      <div class="course-card__buttons">
+        <div class="course-card__button-wrapper">
+          <div
+            data-component="getButton"
+            data-title="Про курс"
+            data-tag="a"
+            data-href="./pages/course-about/course-about.html"
+            data-classes="button--border-radius"
+          >
+          </div>
+        </div>
+        <div class="course-card__button-wrapper">
+          <div 
+            data-component="getButton"
+            data-title="Почати"
+            data-tag="a"
+            data-href="./pages/one-course/one-course.html"
+            data-classes="button--border-radius button--bordered"
+          >
+          </div>
         </div>
       </div>
     </div>
