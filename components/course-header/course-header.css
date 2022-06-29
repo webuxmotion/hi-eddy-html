@@ -1,0 +1,59 @@
+.course-header {
+  background: linear-gradient(90deg, #FF9100 18.23%, rgba(255, 145, 0, 0) 100%), #FFBB61;
+  color: white;
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+.course-header__eddy-image {
+  width: 50%;
+  padding-bottom: 50%;
+  background-size: 100%;
+  position: relative;
+}
+
+.course-header__thing-image {
+  width: 40%;
+  position: absolute;
+  bottom: 55%;
+  left: 77%;
+}
+
+.course-header__images {
+  padding-top: 40px;
+  width: 40%;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.course-header__arrow-image {
+  position: absolute;
+  width: 30%;
+  right: 110%;
+  bottom: 10%;
+}
+
+.course-header__main-image {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+.course-header__main {
+  padding: 50px;
+}
+
+.course-header__title {
+  margin-bottom: 20px;
+}
+
+.course-header__description {
+  padding-bottom: 15px;
+}

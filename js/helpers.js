@@ -14,6 +14,7 @@ const components = [
   'hero',
   'course-card',
   'course-progress',
+  'course-header',
   'price-card',
   'lesson-card',
   'lesson-course-card',

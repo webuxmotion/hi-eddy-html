@@ -32,9 +32,9 @@ function courseCardVariant1({ component }) {
       <div class="course-card__button-wrapper">
         <div 
           data-component="getButton"
-          data-title="Почати"
+          data-title="Вибрати"
           data-tag="a"
-          data-href="./pages/one-course/one-course.html"
+          data-href="./pages/course-about/course-about.html"
           data-classes="button--border-radius button--fullwidth"
         >
         </div>

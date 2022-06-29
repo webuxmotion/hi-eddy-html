@@ -8,12 +8,13 @@ function getButtonParamsKeys() {
     'tag', 
     'classes', 
     'href', 
-    'disabled'
+    'disabled',
+    'onclick',
   ];
 }
 
 function getButton(params) {
-  const { title: titleParam, iconleft, iconright, classes, tag, href, disabled, iconleftclasses, iconrightclasses } = extractParams(params, getButtonParamsKeys());
+  const { onclick, title: titleParam, iconleft, iconright, classes, tag, href, disabled, iconleftclasses, iconrightclasses } = extractParams(params, getButtonParamsKeys());
 
   const title = titleParam === 'test-title' ? '' : titleParam;
   const tagName = tag === 'test-tag'
@@ -52,6 +53,8 @@ function getButton(params) {
     ? '' 
     : `is-disabled`;
 
+  const onclickAttr = onclick === 'test-onclick' ? '' : `onclick="${onclick}"`
+
   return `
     <!-- button -->
     <${tagName}
@@ -59,6 +62,7 @@ function getButton(params) {
       ${disabledAttr}
       class="button ${additionalClasses} ${disabledClass}"
       data-name="${params.component}"
+      ${onclickAttr}
     >
       ${iconLeftElement}
       ${buttonTextElement}
