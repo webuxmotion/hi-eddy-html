@@ -140,6 +140,15 @@ function getPayment(params) {
         >
         </div>
 
+        <div class="payment__checkbox">
+          <div 
+            data-component="getCheckbox"
+            data-title="Я згоден/згодна з умовами <a href='https://www.hi-eddy.com/offert' target='_blank'>Договору публічної оферти</a>"
+            data-errortext="Погодження з цією умовою обов’язкове"
+          >
+          </div>
+        </div>
+
         <div 
           data-component="getButton"
           data-title="Підтвердити оплату"

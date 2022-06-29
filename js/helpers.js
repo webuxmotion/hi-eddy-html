@@ -3,6 +3,8 @@ const components = [
   'breadcrumbs',
   'faq',
   'copy-button',
+  'checkbox',
+  'input',
   'sidebar-button',
   'section-list',
   'sidebar',
@@ -27,7 +29,6 @@ const components = [
   'tariff-card',
   'tariff-status',
   'tariff',
-  'input',
   'footer',
   'example',
 ];
