@@ -1,0 +1,21 @@
+.g-spacer-1 {
+  padding-bottom: var(--spacer);
+}
+.g-spacer-2 {
+  padding-bottom: calc(var(--spacer) * 2);
+}
+.g-spacer-3 {
+  padding-bottom: calc(var(--spacer) * 3);
+}
+.g-spacer-4 {
+  padding-bottom: calc(var(--spacer) * 4);
+}
+.g-spacer-5 {
+  padding-bottom: calc(var(--spacer) * 5);
+}
+.g-spacer-6 {
+  padding-bottom: calc(var(--spacer) * 6);
+}
+.g-spacer-7 {
+  padding-bottom: calc(var(--spacer) * 7);
+}

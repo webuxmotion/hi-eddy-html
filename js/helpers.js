@@ -1,4 +1,5 @@
 const components = [
+  'auth',
   'button',
   'breadcrumbs',
   'faq',
@@ -48,7 +49,9 @@ const pages = [
   'course-about',
   'success',
   'error',
-  'example'
+  'login',
+  'registration',
+  'example',
 ];
 
 loadComponents(() => {
@@ -281,7 +284,8 @@ function loadStyles(callback) {
     './css/reset.css',
     './css/style.css',
     './css/layout.css',
-    './css/helpers.css'
+    './css/helpers.css',
+    './css/global.css',
   ];
 
   components.forEach((el) => {
@@ -307,14 +311,23 @@ function loadStyles(callback) {
 
 function layout() {
   const pageElement = document.getElementById('page');
+  
   if (pageElement) {
+    const dataLayout = pageElement.dataset.layout;
     const pageContent = pageElement.innerHTML;
-    const fullPageCode = getLayoutMarkup(pageContent);
+    let fullPageCode;
+    
+    if (dataLayout === 'layout-2') {
+      fullPageCode = getLayoutMarkup2(pageContent);
+    } else {
+      fullPageCode = getLayoutMarkup1(pageContent);
+    }
+
     pageElement.innerHTML = fullPageCode;
   }
 }
 
-function getLayoutMarkup(content) {
+function getLayoutMarkup1(content) {
   return `
   <div class="l-layout">
     <aside class="l-layout__sidebar">
@@ -323,6 +336,27 @@ function getLayoutMarkup(content) {
     <div class="l-layout__main">
       <div class="l-layout__header">
         <div data-component="headerVariant1"></div>
+      </div>
+      <div class="l-layout__content">
+        ${content}
+      </div>
+      <div class="l-layout__footer">
+        <div data-component="getFooter"></div>
+      </div>
+    </div>
+  </div>
+  `;
+}
+
+function getLayoutMarkup2(content) {
+  return `
+  <div class="l-layout">
+    <aside class="l-layout__sidebar">
+      <div data-component="sidebarVariant1"></div>
+    </aside>
+    <div class="l-layout__main">
+      <div class="l-layout__header">
+        <div data-component="headerVariant2"></div>
       </div>
       <div class="l-layout__content">
         ${content}
