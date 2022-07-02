@@ -32,6 +32,7 @@ const components = [
   'tariff-status',
   'tariff',
   'footer',
+  'final',
   'example',
 ];
 

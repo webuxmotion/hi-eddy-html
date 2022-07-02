@@ -4,7 +4,7 @@ function getLessonCourseCardParamsKeys() {
 
 function getLessonCourseCard(params) {
   const { title, description, href, number, classes, finished: finishedParam, saved: savedParam } = extractParams(params, getLessonCourseCardParamsKeys());
-  console.log('finishedParam', finishedParam);
+  
   const additionalClasses = classes === 'test-classes' ? '' : classes;
 
   const finished = finishedParam === 'test-finished' ? false : finishedParam;

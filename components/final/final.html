@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="../../" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <title>HI-EDDY</title>
+    <style>
+      body {
+        opacity: 0;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <br />
+    <div data-doc-component="getFinal">
+      <h1>final</h1>
+    </div>
+
+    <div data-decorator="doc"></div>
+    <div 
+      data-component="getFinal" 
+      data-title="Успішно"
+      data-type="success"
+      data-text="Оплата пройшла"
+      data-list1-component1="getButton"
+      data-list1-title1="До курсів"
+      data-list1-classes1="button--border-radius button--font-medium"
+      data-list1-tag1="a"
+      data-list1-href1="./pages/courses/courses.html"
+      data-list1-component2="getButton"
+      data-list1-title2="Профіль"
+      data-list1-classes2="button--border-radius button--font-medium button--bordered"
+      data-list1-tag2="a"
+      data-list1-href2="./pages/profile/profile.html"
+    ></div>
+
+    <div data-decorator="doc"></div>
+    <div 
+      data-component="getFinal" 
+      data-title="Відхилено"
+      data-type="error"
+      data-text="УПССсс <br>
+      Щось пішло не так<br>
+      Спробуй ще раз."
+      data-list1-component1="getButton"
+      data-list1-title1="До курсів"
+      data-list1-classes1="button--border-radius button--font-medium"
+      data-list1-tag1="a"
+      data-list1-href1="./pages/courses/courses.html"
+      data-list1-component2="getButton"
+      data-list1-title2="Профіль"
+      data-list1-classes2="button--border-radius button--font-medium button--bordered"
+      data-list1-tag2="a"
+      data-list1-href2="./pages/profile/profile.html"
+    ></div>
+
+    <div data-decorator="doc"></div>
+    <div 
+      data-component="getFinal" 
+      data-type="error-extended"
+      data-list1-component1="getButton"
+      data-list1-title1="На головну"
+      data-list1-classes1="button--border-radius button--font-medium"
+      data-list1-tag1="a"
+      data-list1-href1="./pages/home/home.html"
+    ></div>
+
+    <script src="./js/helpers.js"></script>
+  </body>
+</html>
