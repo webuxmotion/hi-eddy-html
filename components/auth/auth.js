@@ -48,9 +48,45 @@ function getAuth(params) {
         return getLoginContent();
       case 'registration':
         return getRegistrationContent();
+      case 'change-email':
+        return getChangeEmailContent();
       default:
         return '';
     }
+  }
+
+  function getChangeEmailContent() {
+    return `
+    <div 
+      data-component="getTitle"
+      data-title="Введіть ваш новий email"
+      data-tag="h3"
+    >
+    </div>
+    <div class="g-spacer-3"></div>
+    <form class="auth__form">
+      <div 
+        data-component="getInput"
+        data-id="email"
+        data-name="email"
+        data-label="E-mail"
+        data-placeholder=" "
+        data-type="email"
+        data-required="true"
+      >
+      </div>
+      
+      <div class="g-spacer-4"></div>
+      <div 
+        data-component="getButton"
+        data-title="Продовжити"
+        data-classes="button--border-radius button--font-medium"
+      >
+      </div>
+    </form>
+    <div class="g-spacer-10"></div>
+    <p>Якщо передумали, можете <a href="./pages/profile/profile.html">повернутись на профіль</a></p>
+    `;
   }
 
   function getLoginContent() {

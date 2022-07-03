@@ -40,8 +40,9 @@ function sidebarVariant1({ component }) {
             data-title="Допомога ЗСУ"
             data-iconleft="ua-flag"
             data-tag="a"
+            data-blank="true"
             data-classes="button--bordered button--fullwidth button--border-radius"
-            data-href="./index.html"
+            data-href="https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi"
           >
           </div>
         </div>

@@ -51,6 +51,7 @@ const pages = [
   'error',
   'login',
   'registration',
+  'change-email',
   'example',
 ];
 

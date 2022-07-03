@@ -54,3 +54,13 @@ p {
   line-height: 22px;
   max-width: 800px;
 }
+
+p a {
+  color: var(--primary-color);
+  font-size: 17px;
+}
+
+p a:hover {
+  color: var(--primary-color-hover);
+  text-decoration: none;
+}

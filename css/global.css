@@ -19,3 +19,12 @@
 .g-spacer-7 {
   padding-bottom: calc(var(--spacer) * 7);
 }
+.g-spacer-8 {
+  padding-bottom: calc(var(--spacer) * 8);
+}
+.g-spacer-9 {
+  padding-bottom: calc(var(--spacer) * 9);
+}
+.g-spacer-10 {
+  padding-bottom: calc(var(--spacer) * 10);
+}
