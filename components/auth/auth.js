@@ -50,9 +50,63 @@ function getAuth(params) {
         return getRegistrationContent();
       case 'change-email':
         return getChangeEmailContent();
+      case 'reset-password':
+        return getResetPasswordContent();
+      case 'create-password':
+        return getCreatePasswordContent();
       default:
         return '';
     }
+  }
+
+  function getCreatePasswordContent() {
+    return `
+    <form class="auth__form">
+      <div 
+        data-component="getInput"
+        data-id="password"
+        data-name="password"
+        data-label="Новий пароль"
+        data-placeholder=" "
+        data-type="password"
+        data-required="true"
+      >
+      </div>
+      
+      <div class="g-spacer-4"></div>
+      <div 
+        data-component="getButton"
+        data-title="Зберегти"
+        data-classes="button--border-radius button--font-medium"
+      >
+      </div>
+    </form>
+    `;
+  }
+
+  function getResetPasswordContent() {
+    return `
+    <form class="auth__form">
+      <div 
+        data-component="getInput"
+        data-id="email"
+        data-name="email"
+        data-label="E-mail"
+        data-placeholder=" "
+        data-type="email"
+        data-required="true"
+      >
+      </div>
+      
+      <div class="g-spacer-4"></div>
+      <div 
+        data-component="getButton"
+        data-title="Продовжити"
+        data-classes="button--border-radius button--font-medium"
+      >
+      </div>
+    </form>
+    `;
   }
 
   function getChangeEmailContent() {
@@ -142,6 +196,8 @@ function getAuth(params) {
         data-classes="button--border-radius button--font-medium"
       >
       </div>
+      <div class="g-spacer-5"></div>
+      <p>Забули пароль? <a href="./pages/reset-password/reset-password.html">Зкинути пароль</a></p>
     </form>
     `;
   }
@@ -199,6 +255,8 @@ function getAuth(params) {
         data-classes="button--border-radius button--font-medium"
       >
       </div>
+      <div class="g-spacer-5"></div>
+      <p>Вже маєте свій аккаунт? <a href="./pages/login/login.html">Увійти на сайт</a></p>
     </form>
     `;
   }

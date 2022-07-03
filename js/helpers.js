@@ -52,6 +52,9 @@ const pages = [
   'login',
   'registration',
   'change-email',
+  'reset-password',
+  'create-password',
+  'change-password',
   'example',
 ];
 
