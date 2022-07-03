@@ -65,6 +65,7 @@ loadComponents(() => {
   insertComponents();
   insertDocumentation();
   loadIconsScript();
+  loadExport();
   loadEventsScript();
   loadStyles(() => {
     document.body.style.opacity = 1;
@@ -276,6 +277,25 @@ function loadEventsScript() {
     //do stuff with the script
   };
   script.src = './js/events.js';
+
+  document.body.appendChild(script);
+}
+
+function loadExport() {
+  var script = document.createElement('script');
+  script.onload = function () {
+    
+    exportFiles.forEach(el => {
+      var script = document.createElement('script');
+      script.onload = function () {
+      };
+      script.src = el;
+    
+      document.body.appendChild(script);
+    });
+    
+  };
+  script.src = './js/export.js';
 
   document.body.appendChild(script);
 }
