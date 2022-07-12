@@ -1,5 +1,6 @@
 const components = [
   'auth',
+  'message',
   'button',
   'breadcrumbs',
   'faq',

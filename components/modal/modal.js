@@ -21,7 +21,6 @@ function getModal(params) {
             data-component="getButton"
             data-iconleft="close"
             data-classes="button--transparent button--border-radius js-close-modal"
-            data-classes=""
           >
           </div>
         </div>
