@@ -8,6 +8,7 @@ const exportFiles = [
   './components/message/export.js',
   './components/faq/export.js',
   './components/copy-button/export.js',
+  './components/lang-switcher/export.js',
   './js/events.js'
 ];
 
