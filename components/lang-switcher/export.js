@@ -1,8 +1,10 @@
-const element = document.querySelector('.js-lang-switcher-select');
+(function () {
+  const element = document.querySelector('.js-lang-switcher-select');
 
-if (element) {
-  element.addEventListener('change', (e) => {
-    const url = e.target.value;
-    window.location = url;
-  });
-}
+  if (element) {
+    element.addEventListener('change', (e) => {
+      const url = e.target.value;
+      window.location = url;
+    });
+  }
+})();
