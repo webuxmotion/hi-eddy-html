@@ -7,8 +7,8 @@ function langSwitcherVariant1({ component }) {
         <span class="lang-switcher__text">UKR</span>
       </div>
       <select class="lang-switcher__select js-lang-switcher-select">
-        <option value="UKR" selected>UKR</option>
-        <option value="ENG">ENG</option>
+        <option value="/lang/change" selected>UKR</option>
+        <option value="/lang/change">ENG</option>
       </select>
     </div>
     <!-- END. lang-switcher -->
